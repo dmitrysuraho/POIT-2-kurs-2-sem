@@ -1,0 +1,41 @@
+﻿<Window x:Class="AppDesktop.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDesktop"
+        mc:Ignorable="d"
+        Title="AdminWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" WindowState="Maximized">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <Button HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="50"
+                Height="50"
+                Content="Выйти"
+                Command="{Binding Exit}"/>
+        <StackPanel x:Name="buttons"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center" 
+                    Orientation="Horizontal">
+            <Button x:Name="addStudent"
+                    Width="110" 
+                    Height="50"
+                    Content="Добавить студента"
+                    Command="{Binding AddStudent}">
+            </Button>
+            <Button x:Name="addNews"
+                    Width="110"
+                    Height="50"
+                    Content="Добавить новость"/>
+        </StackPanel>
+        <Button x:Name="reset"
+                Width="110"
+                Height="50"
+                Content="Обратно"
+                Visibility="Collapsed"
+                Command="{Binding Reset}"/>
+    </Grid>
+</Window>
