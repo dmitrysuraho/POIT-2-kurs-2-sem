@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,6 +16,16 @@ namespace AppDesktop.Admin
     {
         private AdminWindow adminWindow;
         private MainWindow mainWindow;
+        private Page currentPage;
+        public Page CurrentPage
+        {
+            get { return currentPage; }
+            set
+            {
+                currentPage = value;
+                OnPropertyChanged("CurrentPage");
+            }
+        }
         private AdminModel model;
         public AdminModel Model
         {
@@ -25,7 +36,16 @@ namespace AppDesktop.Admin
                 OnPropertyChanged("Model");
             }
         }
-
+        private double frameOpacity;
+        public double FrameOpacity
+        {
+            get { return frameOpacity; }
+            set
+            {
+                frameOpacity = value;
+                OnPropertyChanged("FrameOpacity");
+            }
+        }
         private Command exit;
         public Command Exit
         {
@@ -40,29 +60,16 @@ namespace AppDesktop.Admin
             }
         }
 
-        private Command addStudent;
-        public Command AddStudent
+        private Command addStudents;
+        public Command AddStudents
         {
             get
             {
-                return addStudent ??
-                  (addStudent = new Command(obj =>
+                return addStudents ??
+                  (addStudents = new Command(obj =>
                   {
-                      adminWindow.buttons.Visibility = Visibility.Collapsed;
-                      adminWindow.reset.Visibility = Visibility.Visible;
-                  }));
-            }
-        }
-        private Command reset;
-        public Command Reset
-        {
-            get
-            {
-                return reset ??
-                  (reset = new Command(obj =>
-                  {
-                      adminWindow.reset.Visibility = Visibility.Collapsed;
-                      adminWindow.buttons.Visibility = Visibility.Visible;
+                      adminWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      ShowPage(new Pages.AddStudentPage.AddStudent(adminWindow));
                   }));
             }
         }
@@ -71,12 +78,27 @@ namespace AppDesktop.Admin
         {
             adminWindow = win;
             mainWindow = main;
+            FrameOpacity = 1;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+        }
+
+        private async void ShowPage(Page page)
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                CurrentPage = page;
+                for (double i = 0.0; i < 1.1; i += 0.1)
+                {
+                    FrameOpacity = i;
+                    Thread.Sleep(50);
+                }
+            });
+            
         }
     }
 }

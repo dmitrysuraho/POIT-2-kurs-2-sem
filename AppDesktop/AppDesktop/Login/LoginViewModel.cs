@@ -17,9 +17,9 @@ namespace Students.MainWindow
     class LoginViewModel : INotifyPropertyChanged
     {
         private AppDesktop.MainWindow mainWindow;
-        private LoginModel model;
         private Users users;
 
+        private LoginModel model;
         public LoginModel Model
         {
             get { return model; }
@@ -40,15 +40,33 @@ namespace Students.MainWindow
                   {
                       if (users == Users.Admin)
                       {
-                          Check(obj, "select * from ADMIN");
+                          if (model.Check(obj, "select * from ADMIN"))
+                          {
+                              mainWindow.Hide();
+                              AdminWindow admin = new AdminWindow(mainWindow);
+                              admin.Show();
+                          }
+                          else MessageBox.Show("Неверный логин или пароль");
                       }
                       else if (users == Users.Teacher)
                       {
-                          Check(obj, "select * from TEACHER");
+                          if (model.Check(obj, "select * from TEACHER"))
+                          {
+                              mainWindow.Hide();
+                              TeacherWindow teacher = new TeacherWindow();
+                              teacher.Show();
+                          }
+                          else MessageBox.Show("Неверный логин или пароль");
                       }
                       else if (users == Users.Student)
                       {
-                          Check(obj, "select * from STUDENT");
+                          if (model.Check(obj, "select * from STUDENT"))
+                          {
+                              mainWindow.Hide();
+                              StudentWindow student = new StudentWindow();
+                              student.Show();
+                          }
+                          else MessageBox.Show("Неверный логин или пароль");
                       }
                       else
                       {
@@ -103,73 +121,7 @@ namespace Students.MainWindow
             mainWindow = win;
         }
 
-        private string GetHash(string str)
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(str); 
-            MD5CryptoServiceProvider CSP =
-                new MD5CryptoServiceProvider();
-            byte[] byteHash = CSP.ComputeHash(bytes);
-            string hash = string.Empty;
-            foreach (byte b in byteHash)
-                hash += string.Format("{0:x2}", b);
-            return hash;
-        }
-
-        private void Check(object obj, string str)
-        {
-            var passwordBox = obj as PasswordBox;
-            string passwordEnter = GetHash(passwordBox.Password);
-            SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = str;
-            sqlCommand.Connection = Connection.SqlConnection;
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            string passwordData = "";
-            bool flag = false;
-            string objRead;
-            foreach (var i in reader)
-            {
-                if (str.Contains("STUDENT")) objRead = reader.GetInt32(0).ToString().Replace(" ", "");
-                else objRead = reader.GetString(0).Replace(" ", "");
-                if (objRead == model.Login)
-                {
-                    passwordData = reader.GetString(1).Replace(" ", "");
-                    flag = true;
-                    break;
-                }
-            }
-            reader.Close();
-            if (flag)
-            {
-                if (passwordData == passwordEnter)
-                {
-                    MessageBox.Show("Вход успешен");
-                    mainWindow.Hide();
-                    if (str.Contains("ADMIN"))
-                    {
-                        AdminWindow admin = new AdminWindow(mainWindow);
-                        admin.Show();
-                    }
-                    else if (str.Contains("TEACHER"))
-                    {
-                        TeacherWindow teacher = new TeacherWindow();
-                        teacher.Show();
-                    }
-                    else
-                    {
-                        StudentWindow student = new StudentWindow();
-                        student.Show();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Неверный пароль");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Неверный логин");
-            }
-        }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

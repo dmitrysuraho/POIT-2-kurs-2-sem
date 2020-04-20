@@ -60,6 +60,11 @@
     </Compile>
     <Compile Include="Admin\AdminModel.cs" />
     <Compile Include="Admin\AdminViewModel.cs" />
+    <Compile Include="Admin\Pages\AddStudentPage\AddStudent.xaml.cs">
+      <DependentUpon>AddStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\AddStudentPage\AddStudentModel.cs" />
+    <Compile Include="Admin\Pages\AddStudentPage\AddStudentViewModel.cs" />
     <Compile Include="DataBaseConnection\Connection.cs" />
     <Compile Include="Login\LoginModel.cs" />
     <Compile Include="Login\LoginViewModel.cs" />
@@ -71,6 +76,10 @@
       <DependentUpon>TeacherWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\AddStudentPage\AddStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +130,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\Pages\AddNewsPage\" />
+    <Folder Include="Admin\Pages\AddTeacherPage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\student.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

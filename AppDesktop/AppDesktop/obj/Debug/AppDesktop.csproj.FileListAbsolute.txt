@@ -19,3 +19,5 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AdminWi
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\StudentWindow.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\TeacherWindow.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csprojAssemblyReference.cache
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.baml
