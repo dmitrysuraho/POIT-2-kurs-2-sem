@@ -9,14 +9,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AppDesktop.Admin.Pages.AddStudentPage
+namespace AppDesktop.Admin.Pages.AddTeacherPage
 {
-    class AddStudentViewModel : INotifyPropertyChanged
+    class AddTeacherViewModel : INotifyPropertyChanged
     {
-        private AdminWindow adminWindow;
+        AdminWindow adminWindow;
 
-        private AddStudentModel model;
-        public AddStudentModel Model
+        private AddTeacherModel model;
+        public AddTeacherModel Model
         {
             get { return model; }
             set
@@ -45,8 +45,8 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
                 return add ??
                   (add = new Command(obj =>
                   {
-                      if(model.Add())
-                        ShowPage();
+                      if (model.Add())
+                          ShowPage();
                   }));
             }
         }
@@ -64,11 +64,11 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
             }
         }
 
-        public AddStudentViewModel(AdminWindow admin)
+        public AddTeacherViewModel(AdminWindow admin)
         {
             adminWindow = admin;
             PageOpacity = 1;
-            Model = new AddStudentModel();
+            Model = new AddTeacherModel();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

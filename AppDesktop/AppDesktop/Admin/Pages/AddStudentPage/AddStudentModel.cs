@@ -21,7 +21,7 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
             set
             {
                 name = value;
-                OnPropertyChanged("PageOpacity");
+                OnPropertyChanged("Name");
             }
         }
         private string record;
@@ -67,19 +67,48 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
             return hash;
         }
 
-        public void Add()
+        public bool Add()
         {
-            //if ()
-            //{
-                
-            //}
-            //else
-            //{
-                string str = $"insert into STUDENT(RECORD, SPASS, NAME, IDGROUP, COURSE) values({record}, '{GetHash(record)}', '{name}', {group}, {course})";
-                SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
-                int number = sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Кол-во затронутых строк: " + number);
-            //}
+            string student = "select RECORD from STUDENT";
+            SqlCommand sqlCom = new SqlCommand(student, Connection.SqlConnection);
+            SqlDataReader reader = sqlCom.ExecuteReader();
+            bool flag = false;
+            foreach (var i in reader)
+            {
+                if (record == reader.GetInt32(0).ToString().Replace(" ", ""))
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            reader.Close();
+            if (!flag)
+            {
+                if (course != "1" && course != "2" && course != "3" && course != "4")
+                {
+                    MessageBox.Show("Неверный курс");
+                    return false;
+                }
+                else if (group != "1" && group != "2" && group != "3" && group != "4")
+                {
+                    MessageBox.Show("Неверная группа");
+                    return false;
+                }
+                else
+                {
+                    string str = $"insert into STUDENT(RECORD, SPASS, NAME, IDGROUP, COURSE) values({record}, '{GetHash(record)}', '{name}', {group}, {course})";
+                    SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
+                    int number = sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Кол-во затронутых строк: " + number);
+                    MessageBox.Show("Студент добавлен");
+                    return true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Данный студент уже есть");
+                return false;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
