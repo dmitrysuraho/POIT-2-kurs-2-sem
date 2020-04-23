@@ -43,16 +43,20 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="20"
-                    Content="Добавить учителя"/>
+                    Content="Добавить учителя"
+                    Command="{Binding AddTeacher}"/>
             <Button x:Name="addNews"
                     Grid.Row="1"
                     Grid.Column="2"
                     Margin="20"
-                    Content="Добавить новость"/>
+                    Content="Добавить новость"
+                    Command="{Binding AddNews}"/>
         </Grid>
-        <Frame Grid.Row="1"
+        <Frame x:Name="Frame"
+               Grid.Row="1"
                NavigationUIVisibility="Hidden"
                Content="{Binding CurrentPage}"
-               Opacity="{Binding FrameOpacity}"/>
+               Opacity="{Binding FrameOpacity}"
+               Visibility="Collapsed"/>
     </Grid>
 </Window>

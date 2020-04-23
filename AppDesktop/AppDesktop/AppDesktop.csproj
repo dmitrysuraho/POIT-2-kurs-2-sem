@@ -60,6 +60,11 @@
     </Compile>
     <Compile Include="Admin\AdminModel.cs" />
     <Compile Include="Admin\AdminViewModel.cs" />
+    <Compile Include="Admin\Pages\AddNewsPage\AddNews.xaml.cs">
+      <DependentUpon>AddNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\AddNewsPage\AddNewsModel.cs" />
+    <Compile Include="Admin\Pages\AddNewsPage\AddNewsViewModel.cs" />
     <Compile Include="Admin\Pages\AddStudentPage\AddStudent.xaml.cs">
       <DependentUpon>AddStudent.xaml</DependentUpon>
     </Compile>
@@ -77,10 +82,21 @@
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Student\Pages\TestPage\Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Pages\TestPage\TestModel.cs" />
+    <Compile Include="Student\Pages\TestPage\TestViewModel.cs" />
+    <Compile Include="Student\StudentModel.cs" />
+    <Compile Include="Student\StudentViewModel.cs" />
     <Compile Include="TeacherWindow.xaml.cs">
       <DependentUpon>TeacherWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\AddNewsPage\AddNews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,6 +121,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="StudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Pages\TestPage\Test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,10 +160,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Pages\AddNewsPage\" />
+    <Resource Include="Pictures\news.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\student.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

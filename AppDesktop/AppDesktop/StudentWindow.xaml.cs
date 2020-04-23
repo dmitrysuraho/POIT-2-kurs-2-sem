@@ -1,4 +1,5 @@
-﻿using Students.DataBaseConnection;
+﻿using AppDesktop.Student;
+using Students.DataBaseConnection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,10 @@ namespace AppDesktop
     /// </summary>
     public partial class StudentWindow : Window
     {
-        public StudentWindow()
+        public StudentWindow(MainWindow win, string login)
         {
             InitializeComponent();
+            DataContext = new StudentViewModel(this, win, login);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

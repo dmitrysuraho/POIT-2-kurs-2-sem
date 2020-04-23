@@ -6,6 +6,58 @@
         xmlns:local="clr-namespace:AppDesktop"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" Background="#FF9E9E9E">
+    <Window.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--<Style x:Key="Pass" TargetType="PasswordBox">
+            <Setter Property="ItemsControl.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -30,12 +82,15 @@
                    HorizontalAlignment="Center"/>
             <StackPanel DataContext="{Binding Model}">
                 <TextBox Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}"
-                     Height="30"
-                         Margin="0,0,0,5"></TextBox>
+                         Height="30"
+                         Margin="0,0,0,5"
+                         Tag="Введите логин"
+                         Style="{StaticResource MyWaterMarkStyle}"/>
                 <PasswordBox
                      Height="30"
                      Margin="0,0,0,5"
-                     x:Name="PasswordBox"></PasswordBox>
+                     x:Name="PasswordBox"
+                     Tag="Введите пароль"/>
             </StackPanel>
             <Button Command="{Binding LogIn}"
                     CommandParameter="{Binding ElementName=PasswordBox}"

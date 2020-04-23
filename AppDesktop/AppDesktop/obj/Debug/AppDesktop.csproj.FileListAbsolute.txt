@@ -21,3 +21,9 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csprojAssemblyReference.cache
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.g.cs
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddTeacherPage\AddTeacher.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddTeacherPage\AddTeacher.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddNewsPage\AddNews.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddNewsPage\AddNews.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\TestPage\Test.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\TestPage\Test.baml

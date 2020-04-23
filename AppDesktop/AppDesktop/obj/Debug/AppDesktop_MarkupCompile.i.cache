@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\App.xaml
-6-1094051320
+8663966902
 
-211433176170
+29-445024781
 13-1505183044
-AdminWindow.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;MainWindow.xaml;StudentWindow.xaml;TeacherWindow.xaml;
+AdminWindow.xaml;Admin\Pages\AddNewsPage\AddNews.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;MainWindow.xaml;StudentWindow.xaml;Student\Pages\TestPage\Test.xaml;TeacherWindow.xaml;
 
 False
 

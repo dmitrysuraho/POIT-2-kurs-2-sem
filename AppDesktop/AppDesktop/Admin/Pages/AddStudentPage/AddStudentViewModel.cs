@@ -45,8 +45,10 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
                 return add ??
                   (add = new Command(obj =>
                   {
-                      if(model.Add())
-                        ShowPage();
+                      if (model.Add())
+                      {
+                          ShowPage();
+                      }
                   }));
             }
         }
@@ -88,6 +90,7 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
                 }
             });
             adminWindow.GridAdminControl.Visibility = Visibility.Visible;
+            adminWindow.Frame.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -63,7 +63,7 @@ namespace Students.MainWindow
                           if (model.Check(obj, "select * from STUDENT"))
                           {
                               mainWindow.Hide();
-                              StudentWindow student = new StudentWindow();
+                              StudentWindow student = new StudentWindow(mainWindow, model.Login);
                               student.Show();
                           }
                           else MessageBox.Show("Неверный логин или пароль");

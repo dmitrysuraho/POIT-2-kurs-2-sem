@@ -88,6 +88,7 @@ namespace AppDesktop.Admin.Pages.AddTeacherPage
                 }
             });
             adminWindow.GridAdminControl.Visibility = Visibility.Visible;
+            adminWindow.Frame.Visibility = Visibility.Collapsed;
         }
     }
 }

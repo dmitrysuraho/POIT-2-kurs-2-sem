@@ -69,7 +69,38 @@ namespace AppDesktop.Admin
                   (addStudents = new Command(obj =>
                   {
                       adminWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      adminWindow.Frame.Visibility = Visibility.Visible;
                       ShowPage(new Pages.AddStudentPage.AddStudent(adminWindow));
+                  }));
+            }
+        }
+
+        private Command addTeacher;
+        public Command AddTeacher
+        {
+            get
+            {
+                return addTeacher ??
+                  (addTeacher = new Command(obj =>
+                  {
+                      adminWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      adminWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.AddTeacherPage.AddTeacher(adminWindow));
+                  }));
+            }
+        }
+
+        private Command addNews;
+        public Command AddNews
+        {
+            get
+            {
+                return addNews ??
+                  (addNews = new Command(obj =>
+                  {
+                      adminWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      adminWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.AddNewsPage.AddNews(adminWindow));
                   }));
             }
         }
@@ -79,6 +110,7 @@ namespace AppDesktop.Admin
             adminWindow = win;
             mainWindow = main;
             FrameOpacity = 1;
+            Model = new AdminModel();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
