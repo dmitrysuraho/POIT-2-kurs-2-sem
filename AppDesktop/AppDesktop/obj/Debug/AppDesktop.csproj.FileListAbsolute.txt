@@ -27,3 +27,15 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\P
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddNewsPage\AddNews.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\TestPage\Test.g.cs
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\TestPage\Test.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csproj.CopyComplete

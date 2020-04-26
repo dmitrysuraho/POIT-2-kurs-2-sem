@@ -17,10 +17,11 @@ namespace AppDesktop.Student.Pages.TestPage
     class TestViewModel : INotifyPropertyChanged
     {
         private StudentWindow studentWindow;
+        private Test test;
+        private bool timer = false;
 
         public ObservableCollection<TestModel> Subjects { get; set; } = new ObservableCollection<TestModel>();
         public ObservableCollection<TestModel> Test { get; set; } = new ObservableCollection<TestModel>();
-
 
         private TestModel selectedSubject;
         public TestModel SelectedSubject
@@ -41,6 +42,17 @@ namespace AppDesktop.Student.Pages.TestPage
             {
                 selectedTest = value;
                 OnPropertyChanged("SelectedTest");
+            }
+        }
+
+        private TestModel model;
+        public TestModel Model
+        {
+            get { return model; }
+            set
+            {
+                model = value;
+                OnPropertyChanged("Model");
             }
         }
 
@@ -80,15 +92,21 @@ namespace AppDesktop.Student.Pages.TestPage
                       {
                           Test.Clear();
                           string subject = SelectedSubject.SubjectName;
-                          string subj = $"select SUBJECT, QUESTION, ANSWER from TESTS where SUBJECT = '{subject}'";
+                          string subj = $"select SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, NAMEQUESTION from TESTS where SUBJECT = '{subject}'";
                           SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
                           SqlDataReader reader = sqlCom.ExecuteReader();
                           foreach(var x in reader)
                           {
                               Test.Add(new TestModel { Question = reader.GetString(1),
-                                                       Answer = reader.GetString(2) });
+                                                       Answer = reader.GetString(2),
+                                                       NoAnswer1 = reader.GetString(3),
+                                                       NoAnswer2 = reader.GetString(4),
+                                                       NameQuestion = reader.GetString(5) });
                           }
                           reader.Close();
+                          test.LeftColumn.IsEnabled = false;
+                          test.RightColumn.Visibility = Visibility.Visible;
+                          Timer();
                       }
                       else
                       {
@@ -98,10 +116,29 @@ namespace AppDesktop.Student.Pages.TestPage
             }
         }
 
-        public TestViewModel(StudentWindow student, string login)
+        private Command endTest;
+        public Command EndTest
         {
+            get
+            {
+                return endTest ??
+                  (endTest = new Command(obj =>
+                  {
+                      MessageBox.Show($"{TestModel.progress}");
+                      test.LeftColumn.IsEnabled = true;
+                      test.RightColumn.Visibility = Visibility.Hidden;
+                      timer = true;
+                  }));
+            }
+        }
+
+        public TestViewModel(Test test, StudentWindow student, string login)
+        {
+            this.test = test;
             studentWindow = student;
             PageOpacity = 1;
+            Model = new TestModel();
+            model.Timer = "0:0";
 
             string subj = $"select SUBJECT from SUBJECT inner join STUDENT on SUBJECT.COURSE = STUDENT.COURSE where RECORD = {login}";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
@@ -131,6 +168,30 @@ namespace AppDesktop.Student.Pages.TestPage
             });
             studentWindow.GridAdminControl.Visibility = Visibility.Visible;
             studentWindow.Frame.Visibility = Visibility.Collapsed;
+        }
+
+        private async void Timer()
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                for (int i = 0; i >= 0; i--)
+                {
+                    for (int j = 59; j >= 0; j--)
+                    {
+                        if (timer) 
+                        {
+                            model.Timer = "0:0";
+                            timer = false;
+                            break;
+                        }
+                        else
+                        {
+                            Thread.Sleep(1000);
+                            model.Timer = $"{i}:{j}";
+                        }
+                    }
+                }
+            });
         }
     }
 }

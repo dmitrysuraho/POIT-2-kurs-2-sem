@@ -23,7 +23,7 @@ namespace AppDesktop.Student.Pages.TestPage
         public Test(StudentWindow win, string login)
         {
             InitializeComponent();
-            DataContext = new TestViewModel(win, login);
+            DataContext = new TestViewModel(this, win, login);
         }
     }
 }

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AppDesktop.Student.Pages.TestPage"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Test"
@@ -14,7 +15,8 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
+        <StackPanel x:Name="LeftColumn"
+                    Grid.Column="0">
             <ComboBox ItemsSource="{Binding Subjects}"
                       SelectedItem="{Binding SelectedSubject}">
                 <ComboBox.ItemTemplate>
@@ -27,17 +29,66 @@
                     Command="{Binding Start}"/>
             <Button Content="Назад"
                     Command="{Binding Cancel}"/>
+            <TextBlock Margin="30"
+                       TextAlignment="Center"
+                       DataContext="{Binding Model}"
+                       Text="{Binding Timer}"/>
         </StackPanel>
-        <ListView Grid.Column="1" ItemsSource="{Binding Test}"
-                 SelectedItem="{Binding SelectedTest}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <RadioButton Content="{Binding Path=Question}"/>
-                        <RadioButton Content="{Binding Path=Answer}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Grid x:Name="RightColumn"
+              Grid.Column="1"
+              Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Предмет"/>
+            <ListView Grid.Row="1" 
+                      Grid.Column="1" ItemsSource="{Binding Test}"
+                      SelectedItem="{Binding SelectedTest}"
+                      SelectionMode="Extended"
+                      Background="Bisque"
+                      BorderBrush="Bisque">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=Question}"/>
+                            <RadioButton Content="{Binding Path=Answer}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Checked">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding AnswerCommand}" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </RadioButton>
+                            <RadioButton Content="{Binding Path=NoAnswer1}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Checked">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding NoAnswerCommand}" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </RadioButton>
+                            <RadioButton Content="{Binding Path=NoAnswer2}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Checked">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding NoAnswerCommand}" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </RadioButton>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="200,50,200,50"
+                    Content="Завершить тест"
+                    Command="{Binding EndTest}"/>
+        </Grid>
     </Grid>
 </Page>
