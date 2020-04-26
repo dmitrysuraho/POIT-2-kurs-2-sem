@@ -20,6 +20,8 @@ namespace AppDesktop.Student.Pages.TestPage
         private Test test;
         private bool timer = false;
 
+        private string login;
+
         public ObservableCollection<TestModel> Subjects { get; set; } = new ObservableCollection<TestModel>();
         public ObservableCollection<TestModel> Test { get; set; } = new ObservableCollection<TestModel>();
 
@@ -90,23 +92,46 @@ namespace AppDesktop.Student.Pages.TestPage
                   {
                       if (SelectedSubject != null)
                       {
-                          Test.Clear();
-                          string subject = SelectedSubject.SubjectName;
-                          string subj = $"select SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, NAMEQUESTION from TESTS where SUBJECT = '{subject}'";
-                          SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
-                          SqlDataReader reader = sqlCom.ExecuteReader();
-                          foreach(var x in reader)
+                          string progr = $"select NOTE from PROGRESS where IDSTUDENT = {login}";
+                          SqlCommand sqlCom1 = new SqlCommand(progr, Connection.SqlConnection);
+                          SqlDataReader reader1 = sqlCom1.ExecuteReader();
+                          bool note = false;
+                          foreach (var x in reader1)
                           {
-                              Test.Add(new TestModel { Question = reader.GetString(1),
-                                                       Answer = reader.GetString(2),
-                                                       NoAnswer1 = reader.GetString(3),
-                                                       NoAnswer2 = reader.GetString(4),
-                                                       NameQuestion = reader.GetString(5) });
+                              //if (Convert.ToString(reader1.GetInt32(0)) == null)
+                              //{
+                              //    note = true;
+                              //}
                           }
-                          reader.Close();
-                          test.LeftColumn.IsEnabled = false;
-                          test.RightColumn.Visibility = Visibility.Visible;
-                          Timer();
+                          reader1.Close();
+
+                          if (note || reader1 == null)
+                          {
+                              Test.Clear();
+                              string subject = SelectedSubject.SubjectName;
+                              string subj = $"select SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, NAMEQUESTION from TESTS where SUBJECT = '{subject}'";
+                              SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
+                              SqlDataReader reader = sqlCom.ExecuteReader();
+                              foreach (var x in reader)
+                              {
+                                  Test.Add(new TestModel
+                                  {
+                                      Question = reader.GetString(1),
+                                      Answer = reader.GetString(2),
+                                      NoAnswer1 = reader.GetString(3),
+                                      NoAnswer2 = reader.GetString(4),
+                                      NameQuestion = reader.GetString(5)
+                                  });
+                              }
+                              reader.Close();
+                              test.LeftColumn.IsEnabled = false;
+                              test.RightColumn.Visibility = Visibility.Visible;
+                              Timer();
+                          }
+                          else
+                          {
+                              MessageBox.Show("Вы уже проходили этот тест");
+                          }
                       }
                       else
                       {
@@ -124,21 +149,23 @@ namespace AppDesktop.Student.Pages.TestPage
                 return endTest ??
                   (endTest = new Command(obj =>
                   {
-                      MessageBox.Show($"{TestModel.progress}");
+                      timer = true;
+                      MessageBox.Show($"Ваш результат: {TestModel.progress}");
                       test.LeftColumn.IsEnabled = true;
                       test.RightColumn.Visibility = Visibility.Hidden;
-                      timer = true;
+                      TestModel.progress = 0;
                   }));
             }
         }
 
         public TestViewModel(Test test, StudentWindow student, string login)
         {
+            this.login = login;
             this.test = test;
             studentWindow = student;
             PageOpacity = 1;
             Model = new TestModel();
-            model.Timer = "0:0";
+            model.Timer = "Время: 5:00";
 
             string subj = $"select SUBJECT from SUBJECT inner join STUDENT on SUBJECT.COURSE = STUDENT.COURSE where RECORD = {login}";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
@@ -180,18 +207,29 @@ namespace AppDesktop.Student.Pages.TestPage
                     {
                         if (timer) 
                         {
-                            model.Timer = "0:0";
-                            timer = false;
+                            model.Timer = "Время: 5:00";
                             break;
                         }
                         else
                         {
                             Thread.Sleep(1000);
-                            model.Timer = $"{i}:{j}";
+                            if (j < 10) model.Timer = $"Время: {i}:0{j}";
+                            else model.Timer = $"Время: {i}:{j}";
                         }
                     }
                 }
             });
+            if (!timer)
+            {
+                MessageBox.Show("Время вышло");
+                test.RightColumn.Visibility = Visibility.Hidden;
+                test.LeftColumn.IsEnabled = true;
+            }
+            string subj = $"insert into PROGRESS(SUBJECT, IDSTUDENT, NOTE) values('{selectedSubject.SubjectName}', {login}, {TestModel.progress})";
+            SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
+            int reader = sqlCom.ExecuteNonQuery();
+            timer = false;
+            TestModel.progress = 0;
         }
     }
 }

@@ -1,8 +1,10 @@
-﻿using Students.RelayCommand;
+﻿using Students.DataBaseConnection;
+using Students.RelayCommand;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -13,7 +15,8 @@ namespace AppDesktop.Student.Pages.TestPage
 {
     class TestModel : INotifyPropertyChanged
     {
-        public static int progress { get; set; } = 0;
+        public static int progress = 0;
+        private bool check = false;
 
         private string timer;
         public string Timer
@@ -100,7 +103,11 @@ namespace AppDesktop.Student.Pages.TestPage
                 return answerCommand ??
                     (answerCommand = new Command(obj =>
                     {
-                        progress += 2;
+                        if(!check)
+                        {
+                            progress += 2;
+                            check = true;
+                        }
                     }));
             }
         }
@@ -113,7 +120,11 @@ namespace AppDesktop.Student.Pages.TestPage
                 return noanswerCommand ??
                     (noanswerCommand = new Command(obj =>
                     {
-                        progress -= 2;
+                        if (check)
+                        {
+                            progress -= 2;
+                            check = false;
+                        }
                     }));
             }
         }

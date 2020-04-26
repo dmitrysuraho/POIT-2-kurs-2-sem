@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppDesktop"
         mc:Ignorable="d"
-        Title="StudentWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" WindowState="Maximized" Background="Bisque">
+        Title="StudentWindow" MinHeight="500" MinWidth="800" Closing="Window_Closing" WindowState="Maximized" Background="Bisque">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

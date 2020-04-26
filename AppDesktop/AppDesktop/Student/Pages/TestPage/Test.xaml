@@ -15,9 +15,31 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="LeftColumn"
+        <Grid x:Name="LeftColumn"
                     Grid.Column="0">
-            <ComboBox ItemsSource="{Binding Subjects}"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       Margin="10"
+                       VerticalAlignment="Top"
+                       TextAlignment="Center"
+                       FontSize="30"
+                       TextWrapping="Wrap"
+                       DataContext="{Binding Model}"
+                       Text="{Binding Timer}"/>
+            <TextBlock Grid.Row="1"
+                       Text="Выберите предмет:"
+                       TextAlignment="Center"
+                       VerticalAlignment="Bottom"/>
+            <ComboBox Grid.Row="2"
+                      Margin="30,0,30,0"
+                      Height="25"
+                      ItemsSource="{Binding Subjects}"
                       SelectedItem="{Binding SelectedSubject}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
@@ -25,33 +47,38 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button Content="Начать"
+            <Button Margin="50,0,50,50"
+                    VerticalAlignment="Top"
+                    Grid.Row="3"
+                    Content="Начать"
                     Command="{Binding Start}"/>
-            <Button Content="Назад"
+            <Button Margin="30,55,30,10"
+                    VerticalAlignment="Bottom"
+                    Grid.Row="4"
+                    Content="На главную"
                     Command="{Binding Cancel}"/>
-            <TextBlock Margin="30"
-                       TextAlignment="Center"
-                       DataContext="{Binding Model}"
-                       Text="{Binding Timer}"/>
-        </StackPanel>
+        </Grid>
         <Grid x:Name="RightColumn"
               Grid.Column="1"
               Visibility="Hidden">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="12*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0"
-                       TextAlignment="Center"
+            <TextBlock DataContext="{Binding SelectedSubject}"
+                       Grid.Row="0"
                        VerticalAlignment="Center"
-                       Text="Предмет"/>
+                       FontSize="15"
+                       TextAlignment="Center"
+                       Text="{Binding SubjectName}"/>
             <ListView Grid.Row="1" 
                       Grid.Column="1" ItemsSource="{Binding Test}"
                       SelectedItem="{Binding SelectedTest}"
                       SelectionMode="Extended"
                       Background="Bisque"
-                      BorderBrush="Bisque">
+                      BorderBrush="Bisque"
+                      HorizontalAlignment="Center">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
@@ -86,7 +113,8 @@
             </ListView>
             <Button Grid.Row="2"
                     Grid.Column="1"
-                    Margin="200,50,200,50"
+                    Width="100"
+                    Height="25"
                     Content="Завершить тест"
                     Command="{Binding EndTest}"/>
         </Grid>
