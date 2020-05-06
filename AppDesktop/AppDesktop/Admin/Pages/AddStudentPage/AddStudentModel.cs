@@ -136,7 +136,7 @@ namespace AppDesktop.Admin.Pages.AddStudentPage
             }
             else
             {
-                string str = $"insert into STUDENT(RECORD, SPASS, NAME, IDGROUP, COURSE, PICTURE) select {record.Replace(" ", "")}, '{GetHash(record.Replace(" ", ""))}', '{name}', {group}, {course}, BulkColumn FROM Openrowset(Bulk 'C:\\Users\\Dmitry\\Desktop\\Курсовой\\AppDesktop\\AppDesktop\\Pictures\\student.jpg', Single_Blob) as image";
+                string str = $"insert into STUDENT(RECORD, SPASS, NAME, IDGROUP, COURSE, NAMEPICTURE, PICTURE) select {record.Replace(" ", "")}, '{GetHash(record.Replace(" ", ""))}', '{name}', {group}, {course}, 'student.jpg', BulkColumn FROM Openrowset(Bulk 'C:\\Users\\Dmitry\\Desktop\\Курсовой\\AppDesktop\\AppDesktop\\Pictures\\student.jpg', Single_Blob) as image";
                 SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
                 int number = sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Студент добавлен");

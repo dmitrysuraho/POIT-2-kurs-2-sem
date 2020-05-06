@@ -13,14 +13,25 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0"
               Background="#FFFDFDFD">
-            <Button HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Выйти"
-                Command="{Binding Exit}"/>
-            <TextBlock DataContext="{Binding Model}"
-                       Text="{Binding EnterStudent}"
-                       HorizontalAlignment="Right"
-                       VerticalAlignment="Top"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Exit"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Выйти"
+                    Command="{Binding Exit}"/>
+            <StackPanel Grid.Column="1">
+                <TextBlock DataContext="{Binding Model}"
+                           Text="{Binding EnterStudent}"
+                           HorizontalAlignment="Center"/>
+                <Button x:Name="Profile"
+                        Margin="90,0,90,0"
+                        Content="Профиль"
+                        Command="{Binding Profile}"/>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="1"
               x:Name="GridAdminControl">
@@ -39,7 +50,7 @@
                     Grid.Column="1"
                     Margin="30"
                     Content="Успеваемость"
-                    Command="{Binding AddStudents}"/>
+                    Command="{Binding Progress}"/>
             <Button x:Name="addTeacher"
                     Grid.Row="0"
                     Grid.Column="2"
@@ -54,7 +65,7 @@
                     Grid.Column="1"
                     Margin="30"
                     Content="Новости"
-                    Command="{Binding AddNews}"/>
+                    Command="{Binding News}"/>
             <Button 
                     Grid.Row="2"
                     Grid.Column="2"

@@ -79,6 +79,52 @@ namespace AppDesktop.Student
             }
         }
 
+        private Command profile;
+        public Command Profile
+        {
+            get
+            {
+                return profile ??
+                  (profile = new Command(obj =>
+                  {
+                      studentWindow.Profile.IsEnabled = false;
+                      studentWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      studentWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.ProfilePage.Profile(studentWindow, login));
+                  }));
+            }
+        }
+
+        private Command news;
+        public Command News
+        {
+            get
+            {
+                return news ??
+                  (news = new Command(obj =>
+                  {
+                      studentWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      studentWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.NewsPage.News(studentWindow));
+                  }));
+            }
+        }
+
+        private Command progress;
+        public Command Progress
+        {
+            get
+            {
+                return progress ??
+                  (progress = new Command(obj =>
+                  {
+                      studentWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      studentWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.ProgressPage.Progress(studentWindow));
+                  }));
+            }
+        }
+
         public StudentViewModel(StudentWindow win, MainWindow main, string login)
         {
             studentWindow = win;

@@ -39,3 +39,9 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\ko\Syst
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csproj.CopyComplete
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\ProfilePage\Profile.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\ProfilePage\Profile.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\NewsPage\News.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\NewsPage\News.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\ProgressPage\Progress.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\ProgressPage\Progress.baml

@@ -53,6 +53,7 @@ namespace AppDesktop.Admin.Pages.AddNewsPage
                       if (openFileDialog.ShowDialog() == true)
                       {
                           model.File = openFileDialog.FileName;
+                          model.FileName = openFileDialog.SafeFileName;
                       }
                   }));
             }

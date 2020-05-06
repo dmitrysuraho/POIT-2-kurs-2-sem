@@ -83,6 +83,21 @@
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Student\Pages\NewsPage\News.xaml.cs">
+      <DependentUpon>News.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Pages\NewsPage\NewsModel.cs" />
+    <Compile Include="Student\Pages\NewsPage\NewsViewModel.cs" />
+    <Compile Include="Student\Pages\ProfilePage\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Pages\ProfilePage\ProfileModel.cs" />
+    <Compile Include="Student\Pages\ProfilePage\ProfileViewModel.cs" />
+    <Compile Include="Student\Pages\ProgressPage\Progress.xaml.cs">
+      <DependentUpon>Progress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Pages\ProgressPage\ProgressModel.cs" />
+    <Compile Include="Student\Pages\ProgressPage\ProgressViewModel.cs" />
     <Compile Include="Student\Pages\TestPage\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -122,6 +137,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="StudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Pages\NewsPage\News.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Pages\ProfilePage\Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Pages\ProgressPage\Progress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

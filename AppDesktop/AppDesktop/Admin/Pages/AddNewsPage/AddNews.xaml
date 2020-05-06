@@ -87,7 +87,7 @@
                 <TextBox
                     Width="{Binding ElementName=LabelAddNews, Path=ActualWidth}"
                     Tag="Заголовок"
-                    MaxLength="20"
+                    MaxLength="35"
                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource MyWaterMarkStyle}"/>
             </Viewbox>

@@ -92,20 +92,21 @@ namespace AppDesktop.Student.Pages.TestPage
                   {
                       if (SelectedSubject != null)
                       {
-                          string progr = $"select NOTE from PROGRESS where IDSTUDENT = {login}";
+                          string progr = $"select * from PROGRESS";
                           SqlCommand sqlCom1 = new SqlCommand(progr, Connection.SqlConnection);
                           SqlDataReader reader1 = sqlCom1.ExecuteReader();
                           bool note = false;
                           foreach (var x in reader1)
                           {
-                              //if (Convert.ToString(reader1.GetInt32(0)) == null)
-                              //{
-                              //    note = true;
-                              //}
+                              if (reader1.GetString(0) == selectedSubject.SubjectName &&
+                                    reader1.GetInt32(1).ToString() == login)
+                              {
+                                  note = true;
+                              }
                           }
                           reader1.Close();
 
-                          if (note || reader1 == null)
+                          if (!note)
                           {
                               Test.Clear();
                               string subject = SelectedSubject.SubjectName;
@@ -124,9 +125,18 @@ namespace AppDesktop.Student.Pages.TestPage
                                   });
                               }
                               reader.Close();
-                              test.LeftColumn.IsEnabled = false;
-                              test.RightColumn.Visibility = Visibility.Visible;
-                              Timer();
+                              if (Test.Count != 0)
+                              {
+                                  studentWindow.Profile.IsEnabled = false;
+                                  studentWindow.Exit.IsEnabled = false;
+                                  test.LeftColumn.IsEnabled = false;
+                                  test.RightColumn.Visibility = Visibility.Visible;
+                                  Timer();
+                              }
+                              else
+                              {
+                                  MessageBox.Show("Данный тест еще не добавили");
+                              }
                           }
                           else
                           {
@@ -151,6 +161,8 @@ namespace AppDesktop.Student.Pages.TestPage
                   {
                       timer = true;
                       MessageBox.Show($"Ваш результат: {TestModel.progress}");
+                      studentWindow.Profile.IsEnabled = true;
+                      studentWindow.Exit.IsEnabled = true;
                       test.LeftColumn.IsEnabled = true;
                       test.RightColumn.Visibility = Visibility.Hidden;
                       TestModel.progress = 0;
@@ -165,7 +177,7 @@ namespace AppDesktop.Student.Pages.TestPage
             studentWindow = student;
             PageOpacity = 1;
             Model = new TestModel();
-            model.Timer = "Время: 5:00";
+            model.Timer = "Время: 1:00";
 
             string subj = $"select SUBJECT from SUBJECT inner join STUDENT on SUBJECT.COURSE = STUDENT.COURSE where RECORD = {login}";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
@@ -207,7 +219,7 @@ namespace AppDesktop.Student.Pages.TestPage
                     {
                         if (timer) 
                         {
-                            model.Timer = "Время: 5:00";
+                            model.Timer = "Время: 1:00";
                             break;
                         }
                         else
@@ -222,9 +234,14 @@ namespace AppDesktop.Student.Pages.TestPage
             if (!timer)
             {
                 MessageBox.Show("Время вышло");
+                MessageBox.Show($"Ваш результат: {TestModel.progress}");
+                studentWindow.Profile.IsEnabled = true;
+                studentWindow.Exit.IsEnabled = true;
                 test.RightColumn.Visibility = Visibility.Hidden;
                 test.LeftColumn.IsEnabled = true;
             }
+            if (TestModel.progress == 0)
+                TestModel.progress++;
             string subj = $"insert into PROGRESS(SUBJECT, IDSTUDENT, NOTE) values('{selectedSubject.SubjectName}', {login}, {TestModel.progress})";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
             int reader = sqlCom.ExecuteNonQuery();

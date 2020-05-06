@@ -1,0 +1,166 @@
+﻿<Page x:Class="AppDesktop.Student.Pages.ProfilePage.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppDesktop.Student.Pages.ProfilePage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Profile"
+      Opacity="{Binding PageOpacity}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="ProfileInfo"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0"
+                  Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.13*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Image"
+                       Grid.Row="0"
+                       DataContext="{Binding Model}"
+                       Source="{Binding DataName}"/>
+                <Button Grid.Row="1"
+                        Width="{Binding ElementName=Image, Path=ActualWidth}"
+                        Content="Сменить"
+                        Command="{Binding ChangeImage}"/>
+            </Grid>
+            <Viewbox Margin="15"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left">
+                <TextBlock 
+                       DataContext="{Binding Model}"
+                       Text="{Binding StudentName}"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     HorizontalAlignment="Right"
+                     Grid.Row="1">
+                <TextBlock 
+                           Grid.Column="0"
+                           Text="Зачетка:"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Row="2"
+                     HorizontalAlignment="Right">
+                <TextBlock
+                       Grid.Column="0"
+                       Text="Курс:"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Row="3"
+                     HorizontalAlignment="Right">
+                <TextBlock 
+                       Grid.Column="0"
+                       Text="Группа:"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Row="4"
+                     HorizontalAlignment="Right">
+                <TextBlock 
+                       Grid.Column="0"
+                       Text="Спец:"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     HorizontalAlignment="left">
+                <TextBlock 
+                       DataContext="{Binding Model}"
+                       Text="{Binding StudentRecord}"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Column="1"
+                     Grid.Row="2"
+                     HorizontalAlignment="left">
+                <TextBlock DataContext="{Binding Model}"
+                       Text="{Binding StudentCourse}"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Column="1"
+                     Grid.Row="3"
+                     HorizontalAlignment="left">
+                <TextBlock DataContext="{Binding Model}"
+                       Text="{Binding StudentGroup}"/>
+            </Viewbox>
+            <Viewbox Margin="15"
+                     Grid.Column="1"
+                     Grid.Row="4"
+                     HorizontalAlignment="left">
+                <TextBlock DataContext="{Binding Model}"
+                           Text="{Binding StudentProfession}"/>
+            </Viewbox>
+            <Button Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="37,0,37,5"
+                    Content="Сменить пароль"
+                    Command="{Binding ChangePass}"/>
+            <Button Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="45,0,45,5"
+                    Content="На главную"
+                    Command="{Binding Cancel}"/>
+        </Grid>
+        <Grid Visibility="Collapsed"
+              x:Name="ChangePassword"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Text="Смена пароля"
+                       FontSize="15"/>
+            <StackPanel Margin="80,0,80,0"
+                        VerticalAlignment="Center"
+                        Grid.Row="1"
+                        DataContext="{Binding Model}">
+                <PasswordBox
+                     Height="30"
+                     Margin="0,0,0,5"
+                     x:Name="PasswordBox"
+                     Tag="Введите пароль"/>
+                <PasswordBox
+                     Height="30"
+                     Margin="0,0,0,5"
+                     x:Name="PasswordBoxNew1"
+                     Tag="Введите пароль"/>
+                <PasswordBox
+                     Height="30"
+                     Margin="0,0,0,5"
+                     x:Name="PasswordBoxNew2"
+                     Tag="Введите пароль"/>
+            </StackPanel>
+            <Button Margin="80,0,80,0"
+                    VerticalAlignment="Top"
+                    Grid.Row="2" 
+                    Command="{Binding Change}"
+                    CommandParameter="{Binding ElementName=PasswordBox}"
+                    Height="30"
+                    Content="Сменить"/>
+        </Grid>
+    </Grid>
+</Page>

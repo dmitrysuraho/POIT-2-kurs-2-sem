@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -46,6 +47,17 @@ namespace AppDesktop.Admin.Pages.AddNewsPage
             }
         }
 
+        private string fileName;
+        public string FileName
+        {
+            get { return fileName; }
+            set
+            {
+                fileName = value;
+                OnPropertyChanged("FileName");
+            }
+        }
+
         public bool Add()
         {
             if (name == "" || name == null)
@@ -65,7 +77,7 @@ namespace AppDesktop.Admin.Pages.AddNewsPage
             }
             else
             {
-                string str = $"insert into News(NAME, DESCRIPTION, PICTURE) select '{name}', '{description}', BulkColumn FROM Openrowset(Bulk '{file}', Single_Blob) as image";
+                string str = $"insert into News(NAME, DESCRIPTION, NAMEPICTURE, DATE, PICTURE) select '{name}', '{description}', '{fileName}', '{DateTime.Now.Month}.{DateTime.Now.Day}.{DateTime.Now.Year}', BulkColumn FROM Openrowset(Bulk '{file}', Single_Blob) as image";
                 SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
                 int number = sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Новость добавлена");
