@@ -66,10 +66,10 @@
                      SelectedItem="{Binding SelectedSubject}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
+                        <StackPanel Margin="10">
                             <TextBlock FontSize="{Binding ElementName=Title, Path=ActualHeight}"
                                        Text="{Binding Subject}" />
-                            <TextBlock Margin="0,10,0,0"
+                            <TextBlock Margin="0,0,0,0"
                                        Text="{Binding Teacher}"/>
                         </StackPanel>
                     </DataTemplate>

@@ -85,12 +85,13 @@
                          Height="30"
                          Margin="0,0,0,5"
                          Tag="Введите логин"
-                         Style="{StaticResource MyWaterMarkStyle}"/>
-                <PasswordBox
-                     Height="30"
-                     Margin="0,0,0,5"
-                     x:Name="PasswordBox"
-                     Tag="Введите пароль"/>
+                         Style="{StaticResource MyWaterMarkStyle}"
+                         MaxLength="20"/>
+                <PasswordBox Height="30"
+                             Margin="0,0,0,5"
+                             x:Name="PasswordBox"
+                             Tag="Введите пароль"
+                             MaxLength="20"/>
             </StackPanel>
             <Button Command="{Binding LogIn}"
                     CommandParameter="{Binding ElementName=PasswordBox}"

@@ -8,7 +8,33 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Profile"
       Opacity="{Binding PageOpacity}">
-
+    <Page.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -125,42 +151,51 @@
               x:Name="ChangePassword"
               Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0"
                        VerticalAlignment="Bottom"
                        HorizontalAlignment="Center"
                        Text="Смена пароля"
                        FontSize="15"/>
-            <StackPanel Margin="80,0,80,0"
-                        VerticalAlignment="Center"
-                        Grid.Row="1"
-                        DataContext="{Binding Model}">
-                <PasswordBox
-                     Height="30"
-                     Margin="0,0,0,5"
-                     x:Name="PasswordBox"
-                     Tag="Введите пароль"/>
-                <PasswordBox
-                     Height="30"
-                     Margin="0,0,0,5"
-                     x:Name="PasswordBoxNew1"
-                     Tag="Введите пароль"/>
-                <PasswordBox
-                     Height="30"
-                     Margin="0,0,0,5"
-                     x:Name="PasswordBoxNew2"
-                     Tag="Введите пароль"/>
+            <StackPanel Grid.Row="1"
+                        DataContext="{Binding ChangeModel}">
+                <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                         Height="30"
+                         Margin="93,5,93,5"
+                         x:Name="PasswordOld"
+                         Tag="Введите старый пароль"
+                         MaxLength="20"
+                         Text="{Binding OldPass}"/>
+                <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                         Height="30"
+                         Margin="93,0,93,0"
+                         x:Name="PasswordNew"
+                         Tag="Введите новый пароль"
+                         MaxLength="20"
+                         Text="{Binding NewPass}"/>
             </StackPanel>
-            <Button Margin="80,0,80,0"
-                    VerticalAlignment="Top"
-                    Grid.Row="2" 
-                    Command="{Binding Change}"
-                    CommandParameter="{Binding ElementName=PasswordBox}"
-                    Height="30"
-                    Content="Сменить"/>
+            <Grid Grid.Row="2"
+                  Margin="93,0,93,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                        Command="{Binding Change}"
+                        Height="30"
+                        Margin="0,0,5,0"
+                        Content="Сменить"
+                        VerticalAlignment="Top"/>
+                <Button Grid.Column="1"
+                        Command="{Binding CancelChange}"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Content="Отмена"
+                        VerticalAlignment="Top"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

@@ -23,6 +23,17 @@ namespace AppDesktop.Student.Pages.ProfilePage
         private Profile profile;
         private string login;
 
+        private ProfileModel changeModel;
+        public ProfileModel ChangeModel
+        {
+            get { return changeModel; }
+            set
+            {
+                changeModel = value;
+                OnPropertyChanged("ChangeModel");
+            }
+        }
+
         private ProfileModel model;
         public ProfileModel Model
         {
@@ -59,6 +70,20 @@ namespace AppDesktop.Student.Pages.ProfilePage
             }
         }
 
+        private Command cancelChange;
+        public Command CancelChange
+        {
+            get
+            {
+                return cancelChange ??
+                  (cancelChange = new Command(obj =>
+                  {
+                      profile.ProfileInfo.Visibility = Visibility.Visible;
+                      profile.ChangePassword.Visibility = Visibility.Collapsed;
+                  }));
+            }
+        }
+
         private Command changePass;
         public Command ChangePass
         {
@@ -81,8 +106,16 @@ namespace AppDesktop.Student.Pages.ProfilePage
                 return change ??
                   (change = new Command(obj =>
                   {
-                      profile.ProfileInfo.Visibility = Visibility.Visible;
-                      profile.ChangePassword.Visibility = Visibility.Collapsed;
+                      if (changeModel.CheckChange(login))
+                      {
+                          MessageBox.Show("Пароль изменен");
+                          profile.ProfileInfo.Visibility = Visibility.Visible;
+                          profile.ChangePassword.Visibility = Visibility.Collapsed;
+                      }
+                      else
+                      {
+                          MessageBox.Show("Введены некорректные данные");
+                      }
                   }));
             }
         }
@@ -115,6 +148,7 @@ namespace AppDesktop.Student.Pages.ProfilePage
             this.profile = profile;
             PageOpacity = 1;
             Model = new ProfileModel(login);
+            ChangeModel = new ProfileModel(login);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
