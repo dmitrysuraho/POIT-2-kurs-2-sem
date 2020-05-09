@@ -1,20 +1,24 @@
-﻿using Students.RelayCommand;
+﻿using Students.DataBaseConnection;
+using Students.RelayCommand;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Markup;
 
 namespace AppDesktop.Student.Pages.ProgressPage
 {
     class ProgressViewModel : INotifyPropertyChanged
     {
         private StudentWindow studentWindow;
+        private string login;
 
         private double pageOpacity;
         public double PageOpacity
@@ -40,19 +44,49 @@ namespace AppDesktop.Student.Pages.ProgressPage
             }
         }
 
-        public BindingList<ProgressModel> Notes { get; set; } = new BindingList<ProgressModel>();
+        public ObservableCollection<ProgressModel> Notes { get; set; } = new ObservableCollection<ProgressModel>();
 
-        public ProgressViewModel(StudentWindow student)
+        public ProgressViewModel(StudentWindow student, string login)
         {
             studentWindow = student;
+            this.login = login;
             PageOpacity = 1;
-            for(int i = 0; i < 30; i++)
+
+            string subj = $"select SUBJECT from SUBJECT inner join STUDENT on SUBJECT.COURSE = STUDENT.COURSE where STUDENT.RECORD = {login}";
+            SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
+            SqlDataReader reader = sqlCom.ExecuteReader();
+            List<string> subjects = new List<string>();
+            foreach(var x in reader)
             {
-                Notes.Add(new ProgressModel
+                subjects.Add(reader.GetString(0).Trim());
+            }
+            reader.Close();
+            string progress = $"select PROGRESS.SUBJECT, PROGRESS.NOTE from PROGRESS inner join STUDENT on PROGRESS.IDSTUDENT = STUDENT.RECORD where STUDENT.RECORD = {login}";
+            SqlCommand sqlCom2 = new SqlCommand(progress, Connection.SqlConnection);
+            SqlDataReader reader2 = sqlCom2.ExecuteReader();
+            Dictionary<string, int> progr = new Dictionary<string, int>();
+            foreach(var x in reader2)
+            {
+                progr.Add(reader2.GetString(0).Trim(), reader2.GetInt32(1));
+            }
+            reader2.Close();
+            foreach(var x in subjects)
+            {
+                if(progr.ContainsKey(x))
                 {
-                    Subject = "Subject " + i,
-                    Note = i + 1
-                });
+                    Notes.Add(new ProgressModel
+                    {
+                        Subject = x,
+                        Note = progr[x]
+                    });
+                }
+                else
+                {
+                    Notes.Add(new ProgressModel
+                    {
+                        Subject = x + " - нет результата"
+                    });
+                }
             }
         }
 

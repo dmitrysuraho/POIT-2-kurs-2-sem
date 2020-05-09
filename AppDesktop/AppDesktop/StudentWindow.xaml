@@ -55,7 +55,7 @@
                     Grid.Row="0"
                     Grid.Column="2"
                     Margin="30"
-                    Command="{Binding AddTeacher}">
+                    Command="{Binding Subjects}">
                 <TextBlock TextAlignment="Center"
                            Text="Список предметов и литературы" 
                            TextWrapping="Wrap"/>

@@ -28,14 +28,17 @@
             <DataGrid Grid.Row="1"
                       ItemsSource="{Binding Notes}"
                       CanUserDeleteRows="False"
-                      AutoGenerateColumns="False">
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path = Subject}"
-                                        Width="100"
-                                        IsReadOnly="True"/>
+                                        Width="*"
+                                        IsReadOnly="True"
+                                        Header="Предмет"/>
                     <DataGridTextColumn Binding="{Binding Path = Note}"
                                         Width="*"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        Header="Отметка"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button Grid.Row="2"

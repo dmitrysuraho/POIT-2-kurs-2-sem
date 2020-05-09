@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,12 +13,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace AppDesktop.Student.Pages.NewsPage
 {
     class NewsViewModel : INotifyPropertyChanged
     {
-
         private StudentWindow studentWindow;
         private News news;
 
@@ -29,6 +30,7 @@ namespace AppDesktop.Student.Pages.NewsPage
             get { return selectedNews; }
             set
             {
+                news.ChooseNews.Visibility = Visibility.Collapsed;
                 selectedNews = value;
                 OnPropertyChanged("SelectedNews");
             }
@@ -68,33 +70,37 @@ namespace AppDesktop.Student.Pages.NewsPage
             string subj = $"select * from NEWS";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
             SqlDataReader reader = sqlCom.ExecuteReader();
-            string title, description, dataName;
-            byte[] data;
             foreach (var x in reader)
             {
-                title = reader.GetString(0).Trim();
-                description = reader.GetString(1).Trim();
-                data = (byte[])reader.GetValue(2);
-                dataName = @"C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\" + reader.GetString(3).Trim();
-                try
+                using (MemoryStream memStream = new MemoryStream(100))
                 {
-                    using (FileStream fs = new FileStream(dataName, FileMode.OpenOrCreate))
+                    byte[] arr = (byte[])reader.GetValue(2);
+                    memStream.Write(arr, 0, arr.Length);
+                    Bitmap bm = new Bitmap(memStream);
+                    News.Add(new NewsModel
                     {
-                        fs.Write(data, 0, data.Length);
-                    }
+                        Title = reader.GetString(0).Trim(),
+                        Description = reader.GetString(1).Trim(),
+                        Data = BitmapToImageSource(bm),
+                        Date = Convert.ToString(reader.GetDateTime(4).Date).Substring(0, 10)
+                    });
                 }
-                catch
-                {
-                }
-                News.Add(new NewsModel
-                {
-                    Title = title,
-                    Description = description,
-                    DataName = dataName,
-                    Date = Convert.ToString(reader.GetDateTime(4).Date).Substring(0,10)
-                });
             }
             reader.Close();
+
+            NewsModel temp;
+            for (int i = 0; i < News.Count - 1; i++)
+            {
+                for (int j = i + 1; j < News.Count; j++)
+                {
+                    if (string.Compare(News[i].Date, News[j].Date) > 0)
+                    {
+                        temp = News[i];
+                        News[i] = News[j];
+                        News[j] = temp;
+                    }
+                }
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -115,6 +121,22 @@ namespace AppDesktop.Student.Pages.NewsPage
             });
             studentWindow.GridAdminControl.Visibility = Visibility.Visible;
             studentWindow.Frame.Visibility = Visibility.Collapsed;
+        }
+
+        BitmapImage BitmapToImageSource(Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                memory.Position = 0;
+                BitmapImage bitmapimage = new BitmapImage();
+                bitmapimage.BeginInit();
+                bitmapimage.StreamSource = memory;
+                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapimage.EndInit();
+
+                return bitmapimage;
+            }
         }
     }
 }

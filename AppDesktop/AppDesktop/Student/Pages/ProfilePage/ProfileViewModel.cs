@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace AppDesktop.Student.Pages.ProfilePage
 {
@@ -100,7 +102,7 @@ namespace AppDesktop.Student.Pages.ProfilePage
                           string str = $"UPDATE STUDENT SET PICTURE = (SELECT * FROM OPENROWSET(BULK '{openFileDialog.FileName}', SINGLE_BLOB) AS image), NAMEPICTURE = '{openFileDialog.SafeFileName}' where RECORD = {login}";
                           SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
                           int number = sqlCommand.ExecuteNonQuery();
-                          model.DataName = openFileDialog.FileName;
+                          model.Data = BitmapToImageSource(new Bitmap(openFileDialog.FileName));
                       }
                   }));
             }
@@ -133,6 +135,22 @@ namespace AppDesktop.Student.Pages.ProfilePage
             });
             studentWindow.GridAdminControl.Visibility = Visibility.Visible;
             studentWindow.Frame.Visibility = Visibility.Collapsed;
+        }
+
+        BitmapImage BitmapToImageSource(Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                memory.Position = 0;
+                BitmapImage bitmapimage = new BitmapImage();
+                bitmapimage.BeginInit();
+                bitmapimage.StreamSource = memory;
+                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapimage.EndInit();
+
+                return bitmapimage;
+            }
         }
     }
 }

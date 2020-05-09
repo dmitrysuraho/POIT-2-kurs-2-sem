@@ -93,7 +93,7 @@ create table TESTS
 )
 
 ALTER TABLE TESTS ADD NOANSWER1 nvarchar(100), NOANSWER2 nvarchar(100)
-ALTER TABLE TESTS ADD NAMEQUESTION nvarchar(10)
+ALTER TABLE TESTS ADD NAMEQUESTION nvarchar(50)
 
 insert into TESTS(ID_QUESTION, SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, NAMEQUESTION)
 	values(1, 'ОАиП', 'Какое из предложенных выражений может быть использовано в качестве условий?', '(х<-3) или (х<>5)', 't*4-3', 'х-у', 'ОАиП1'),
@@ -102,7 +102,25 @@ insert into TESTS(ID_QUESTION, SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, 
 		  (4, 'ОАиП', 'Примером разветвленного алгоритма является:', 'переход улицы по сигналу светофора', 'заваривание чая','круговорот воды в природе', 'ОАиП4'),
 		  (5, 'ОАиП', 'Какое из свойств алгоритма описывает возможность применения алгоритма к целому классу задач?', 'массовость', 'конечность','дискретность', 'ОАиП5')
 
+------Создание таблицы LITERATURE
+create table LITERATURE
+(
+	TITLE char(100) primary key,
+	AUTHORS char(100), 
+	SUBJECT char(10)  constraint LITERATURE_SUBJECT_FK foreign key references SUBJECT(SUBJECT),
+	PICTURE varbinary(MAX)
+);
 
+insert into LITERATURE(TITLE, AUTHORS, SUBJECT, PICTURE)
+select 'Язык программирования C# 7 и платформы .NET и .NET Core', 'Эндрю Троелсен, Филипп Джепикс', 'ООП',
+BulkColumn FROM Openrowset(Bulk N'C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Pictures\literatireC#1.jpg', Single_Blob) as image
 
+insert into LITERATURE(TITLE, AUTHORS, SUBJECT, PICTURE)
+select 'C# для чайников', 'Джон Пол Мюллер при участии Билла Семпфа и Чака Сфера', 'ООП',
+BulkColumn FROM Openrowset(Bulk N'C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Pictures\literatireC#2.jpg', Single_Blob) as image
+
+insert into LITERATURE(TITLE, AUTHORS, SUBJECT, PICTURE)
+select 'Геометрические основы компьютерной графики', 'Е.М.Вечтомов, Е.Н.Лубягина', 'КГИГ',
+BulkColumn FROM Openrowset(Bulk N'C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Pictures\literatireKGIG1.jpg', Single_Blob) as image
 
 

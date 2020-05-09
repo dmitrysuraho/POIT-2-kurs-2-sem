@@ -32,17 +32,6 @@ namespace AppDesktop.Student.Pages.ProgressPage
             }
         }
 
-        private string teacher;
-        public string Teacher
-        {
-            get { return teacher; }
-            set
-            {
-                teacher = value;
-                OnPropertyChanged("Teacher");
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

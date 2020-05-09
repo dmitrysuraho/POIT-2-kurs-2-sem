@@ -13,17 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AppDesktop.Student.Pages.ProgressPage
+namespace AppDesktop.Student.Pages.SubjectsPage
 {
     /// <summary>
-    /// Логика взаимодействия для Progress.xaml
+    /// Логика взаимодействия для Subjects.xaml
     /// </summary>
-    public partial class Progress : Page
+    public partial class Subjects : Page
     {
-        public Progress(StudentWindow win, string login)
+        public Subjects(StudentWindow win, string login)
         {
             InitializeComponent();
-            DataContext = new ProgressViewModel(win, login);
+            DataContext = new SubjectsViewModel(win, login, this);
         }
     }
 }

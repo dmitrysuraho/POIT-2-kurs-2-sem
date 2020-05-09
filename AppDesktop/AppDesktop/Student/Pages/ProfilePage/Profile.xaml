@@ -38,7 +38,7 @@
                 <Image x:Name="Image"
                        Grid.Row="0"
                        DataContext="{Binding Model}"
-                       Source="{Binding DataName}"/>
+                       Source="{Binding Data}"/>
                 <Button Grid.Row="1"
                         Width="{Binding ElementName=Image, Path=ActualWidth}"
                         Content="Сменить"

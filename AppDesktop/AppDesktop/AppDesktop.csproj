@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +99,11 @@
     </Compile>
     <Compile Include="Student\Pages\ProgressPage\ProgressModel.cs" />
     <Compile Include="Student\Pages\ProgressPage\ProgressViewModel.cs" />
+    <Compile Include="Student\Pages\SubjectsPage\Subjects.xaml.cs">
+      <DependentUpon>Subjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Pages\SubjectsPage\SubjectsModel.cs" />
+    <Compile Include="Student\Pages\SubjectsPage\SubjectsViewModel.cs" />
     <Compile Include="Student\Pages\TestPage\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -149,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Student\Pages\ProgressPage\Progress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Pages\SubjectsPage\Subjects.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

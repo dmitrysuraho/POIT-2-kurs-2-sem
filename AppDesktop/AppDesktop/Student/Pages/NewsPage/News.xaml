@@ -15,12 +15,12 @@
             <ColumnDefinition Width="1.2*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0"
-                   Margin="0,150,0,0"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Center"
-                   Text="Выберите новость"
-                   FontSize="{Binding ElementName=Title, Path=Height}"/>
+        <Viewbox Grid.Column="0">
+            <TextBlock Text="Выберите новость"
+                       FontSize="{Binding ElementName=Title, Path=Height}"
+                       x:Name="ChooseNews"
+                       Margin="50"/>
+        </Viewbox>
         <Grid DataContext="{Binding SelectedNews}"
               Grid.Column="0">
             <Grid.RowDefinitions>
@@ -33,7 +33,7 @@
                    Text="{Binding Title}"
                    HorizontalAlignment="Center"/>
             <Image Grid.Row="1"
-                   Source="{Binding DataName}"
+                   Source="{Binding Data}"
                    Margin="20"/>
             <ScrollViewer Grid.Row="2"  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <TextBlock 

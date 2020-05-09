@@ -7,10 +7,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace AppDesktop.Student.Pages.NewsPage
+namespace AppDesktop.Student.Pages.SubjectsPage
 {
-    class NewsModel : INotifyPropertyChanged
+    class SubjectsModel : INotifyPropertyChanged
     {
+        private string subject;
+        public string Subject
+        {
+            get { return subject; }
+            set
+            {
+                subject = value;
+                OnPropertyChanged("Subject");
+            }
+        }
+
+        private string teacher;
+        public string Teacher
+        {
+            get { return teacher; }
+            set
+            {
+                teacher = value;
+                OnPropertyChanged("Teacher");
+            }
+        }
+
         private string title;
         public string Title
         {
@@ -22,14 +44,14 @@ namespace AppDesktop.Student.Pages.NewsPage
             }
         }
 
-        private string description;
-        public string Description
+        private string authors;
+        public string Authors
         {
-            get { return description; }
+            get { return authors; }
             set
             {
-                description = value;
-                OnPropertyChanged("Description");
+                authors = value;
+                OnPropertyChanged("Authors");
             }
         }
 
@@ -41,17 +63,6 @@ namespace AppDesktop.Student.Pages.NewsPage
             {
                 data = value;
                 OnPropertyChanged("Data");
-            }
-        }
-
-        private string date;
-        public string Date
-        {
-            get { return date; }
-            set
-            {
-                date = value;
-                OnPropertyChanged("Date");
             }
         }
 

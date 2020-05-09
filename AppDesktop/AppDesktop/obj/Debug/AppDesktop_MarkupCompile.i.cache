@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\App.xaml
-11-114207548
+12-2054642597
 
-381288006693
-14-1490455308
-AdminWindow.xaml;Admin\Pages\AddNewsPage\AddNews.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;MainWindow.xaml;StudentWindow.xaml;Student\Pages\NewsPage\News.xaml;Student\Pages\ProfilePage\Profile.xaml;Student\Pages\ProgressPage\Progress.xaml;Student\Pages\TestPage\Test.xaml;TeacherWindow.xaml;
+41-737069094
+151198144362
+AdminWindow.xaml;Admin\Pages\AddNewsPage\AddNews.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;MainWindow.xaml;StudentWindow.xaml;Student\Pages\NewsPage\News.xaml;Student\Pages\ProfilePage\Profile.xaml;Student\Pages\ProgressPage\Progress.xaml;Student\Pages\SubjectsPage\Subjects.xaml;Student\Pages\TestPage\Test.xaml;TeacherWindow.xaml;
 
-True
+False
 

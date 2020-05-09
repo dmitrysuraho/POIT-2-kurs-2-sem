@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace AppDesktop.Student.Pages.ProfilePage
 {
@@ -69,15 +71,14 @@ namespace AppDesktop.Student.Pages.ProfilePage
             }
         }
 
-        private byte[] data;
-        private string dataName;
-        public string DataName
+        private BitmapImage data;
+        public BitmapImage Data
         {
-            get { return dataName; }
+            get { return data; }
             set
             {
-                dataName = value;
-                OnPropertyChanged("DataName");
+                data = value;
+                OnPropertyChanged("Data");
             }
         }
 
@@ -99,25 +100,37 @@ namespace AppDesktop.Student.Pages.ProfilePage
             SqlDataReader reader = sqlCom.ExecuteReader();
             foreach (var x in reader)
             {
-                studentName = reader.GetString(2);
-                studentRecord = reader.GetInt32(0);
-                studentGroup = reader.GetInt32(4);
-                studentCourse = reader.GetInt32(5);
-                studentProfession = reader.GetString(8);
-                data = (byte[])reader.GetValue(3);
-
-                dataName = @"C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\bin\Debug\" + reader.GetString(6).Replace(" ", "");
-            }
-            reader.Close();
-            try
-            {
-                using (FileStream fs = new FileStream(dataName, FileMode.OpenOrCreate))
+                using (MemoryStream memStream = new MemoryStream(100))
                 {
-                    fs.Write(data, 0, data.Length);
+                    studentName = reader.GetString(2);
+                    studentRecord = reader.GetInt32(0);
+                    studentGroup = reader.GetInt32(4);
+                    studentCourse = reader.GetInt32(5);
+                    studentProfession = reader.GetString(8);
+
+                    byte[] arr = (byte[])reader.GetValue(3);
+                    memStream.Write(arr, 0, arr.Length);
+                    Bitmap bm = new Bitmap(memStream);
+                    data = BitmapToImageSource(bm);
+
                 }
             }
-            catch
+            reader.Close();
+        }
+
+        BitmapImage BitmapToImageSource(Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
             {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                memory.Position = 0;
+                BitmapImage bitmapimage = new BitmapImage();
+                bitmapimage.BeginInit();
+                bitmapimage.StreamSource = memory;
+                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapimage.EndInit();
+
+                return bitmapimage;
             }
         }
     }

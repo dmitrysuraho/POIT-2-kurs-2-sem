@@ -120,7 +120,22 @@ namespace AppDesktop.Student
                   {
                       studentWindow.GridAdminControl.Visibility = Visibility.Collapsed;
                       studentWindow.Frame.Visibility = Visibility.Visible;
-                      ShowPage(new Pages.ProgressPage.Progress(studentWindow));
+                      ShowPage(new Pages.ProgressPage.Progress(studentWindow, login));
+                  }));
+            }
+        }
+
+        private Command subjects;
+        public Command Subjects
+        {
+            get
+            {
+                return subjects ??
+                  (subjects = new Command(obj =>
+                  {
+                      studentWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      studentWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.SubjectsPage.Subjects(studentWindow, login));
                   }));
             }
         }
