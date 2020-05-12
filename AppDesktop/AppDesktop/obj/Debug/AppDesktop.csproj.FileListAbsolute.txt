@@ -18,7 +18,6 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AdminWindow.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\StudentWindow.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\TeacherWindow.baml
-C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csprojAssemblyReference.cache
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.g.cs
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddStudentPage\AddStudent.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\AddTeacherPage\AddTeacher.g.cs
@@ -47,3 +46,12 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\ProgressPage\Progress.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\SubjectsPage\Subjects.g.cs
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Student\Pages\SubjectsPage\Subjects.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\AddLiteraturePage\AddLiterature.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\AddLiteraturePage\AddLiterature.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\AddTestPage\AddTest.cs.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\AddTestPage\AddTest.cs.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csprojAssemblyReference.cache
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\StudentsList\StudentsList.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\StudentsList\StudentsList.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\ChangeStudentPage\ChangeStudent.g.cs
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\ChangeStudentPage\ChangeStudent.baml

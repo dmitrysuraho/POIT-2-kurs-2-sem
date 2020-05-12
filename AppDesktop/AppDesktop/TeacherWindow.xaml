@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppDesktop"
         mc:Ignorable="d"
-        Title="TeacherWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" WindowState="Maximized">
+        Title="TeacherWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" WindowState="Maximized" Background="Bisque">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="#FFFDFDFD">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Exit"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Выйти"
+                    Command="{Binding Exit}"/>
+            <StackPanel Grid.Column="1">
+                <TextBlock DataContext="{Binding Model}"
+                           Text="{Binding EnterTeacher}"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1"
+              x:Name="GridAdminControl">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="addStudent"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="30"
+                    Content="Список студентов"
+                    Command="{Binding StudentList}"/>
+            <Button x:Name="addTeacher"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="30"
+                    Command="{Binding AddTest}">
+                <TextBlock TextAlignment="Center"
+                           Text="Добавить тест" 
+                           TextWrapping="Wrap"/>
+            </Button>
+            <Button x:Name="addNews"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="30"
+                    Content="Добавить литературу"
+                    Command="{Binding AddLiterature}"/>
+        </Grid>
+        <Frame x:Name="Frame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding CurrentPage}"
+               Opacity="{Binding FrameOpacity}"
+               Visibility="Collapsed"/>
     </Grid>
 </Window>

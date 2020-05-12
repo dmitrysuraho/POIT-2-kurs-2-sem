@@ -87,12 +87,13 @@ namespace AppDesktop.Admin.Pages.AddTeacherPage
                 }
             }
             reader2.Close();
+            int index;
             if (teachBool)
             {
                 MessageBox.Show("Такой учитель уже есть");
                 return false;
             }
-            else if (identificator == "" || identificator == null)
+            else if (identificator == "" || identificator == null || int.TryParse(identificator, out index) || identificator == "admin")
             {
                 MessageBox.Show("Неверный идентификатор");
                 return false;

@@ -31,11 +31,11 @@
                       AutoGenerateColumns="False"
                       CanUserAddRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path = Subject}"
+                    <DataGridTextColumn Binding="{Binding Path=Subject}"
                                         Width="*"
                                         IsReadOnly="True"
                                         Header="Предмет"/>
-                    <DataGridTextColumn Binding="{Binding Path = Note}"
+                    <DataGridTextColumn Binding="{Binding Path=Note}"
                                         Width="*"
                                         IsReadOnly="True"
                                         Header="Отметка"/>

@@ -110,7 +110,7 @@ namespace AppDesktop.Student.Pages.TestPage
                           {
                               Test.Clear();
                               string subject = SelectedSubject.SubjectName;
-                              string subj = $"select SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2, NAMEQUESTION from TESTS where SUBJECT = '{subject}'";
+                              string subj = $"select SUBJECT, QUESTION, ANSWER, NOANSWER1, NOANSWER2 from TESTS where SUBJECT = '{subject}'";
                               SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
                               SqlDataReader reader = sqlCom.ExecuteReader();
                               foreach (var x in reader)
@@ -120,8 +120,7 @@ namespace AppDesktop.Student.Pages.TestPage
                                       Question = reader.GetString(1),
                                       Answer = reader.GetString(2),
                                       NoAnswer1 = reader.GetString(3),
-                                      NoAnswer2 = reader.GetString(4),
-                                      NameQuestion = reader.GetString(5)
+                                      NoAnswer2 = reader.GetString(4)
                                   });
                               }
                               reader.Close();

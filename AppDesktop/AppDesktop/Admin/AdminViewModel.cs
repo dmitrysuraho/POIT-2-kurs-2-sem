@@ -75,6 +75,21 @@ namespace AppDesktop.Admin
             }
         }
 
+        private Command changeStudents;
+        public Command ChangeStudents
+        {
+            get
+            {
+                return changeStudents ??
+                  (changeStudents = new Command(obj =>
+                  {
+                      adminWindow.GridAdminControl.Visibility = Visibility.Collapsed;
+                      adminWindow.Frame.Visibility = Visibility.Visible;
+                      ShowPage(new Pages.ChangeStudentPage.ChangeStudent(adminWindow));
+                  }));
+            }
+        }
+
         private Command addTeacher;
         public Command AddTeacher
         {

@@ -16,7 +16,6 @@ namespace AppDesktop.Login
     class LoginModel : INotifyPropertyChanged
     {
         private string login;
-
         public string Login
         {
             get { return login; }
@@ -25,6 +24,34 @@ namespace AppDesktop.Login
                 login = value;
                 OnPropertyChanged("Login");
             }
+        }
+
+        private string loginForChange;
+        public string LoginForChange
+        {
+            get { return loginForChange; }
+            set
+            {
+                loginForChange = value;
+                OnPropertyChanged("LoginForChange");
+            }
+        }
+
+        private string email;
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                email = value;
+                OnPropertyChanged("Email");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
 
         private string GetHash(string str)
@@ -39,39 +66,59 @@ namespace AppDesktop.Login
             return hash;
         }
 
-        public bool Check(object obj, string str)
+        public string Check(object obj)
         {
             var passwordBox = obj as PasswordBox;
             string passwordEnter = GetHash(passwordBox.Password);
+            string loginEnter = login;
+            string flag = "";
+            string str = $"select * from ADMIN";
             SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
-            string passwordData = "";
-            bool flag = false;
-            string objRead;
-            foreach (var i in reader)
+            foreach(var x in reader)
             {
-                if (str.Contains("STUDENT")) objRead = reader.GetInt32(0).ToString().Replace(" ", "");
-                else objRead = reader.GetString(0).Replace(" ", "");
-                if (objRead == login)
+                if(reader.GetString(0).Trim().Equals(loginEnter) &&
+                    reader.GetString(1).Trim().Equals(passwordEnter))
                 {
-                    passwordData = reader.GetString(1).Replace(" ", "");
-                    flag = true;
+                    flag = "admin";
                     break;
                 }
+
             }
             reader.Close();
-            if (flag)
+            if(flag == "")
             {
-                if (passwordData == passwordEnter) return true;
-                else return false;
+                string str1 = $"select TEACHER, TPASS from TEACHER";
+                SqlCommand sqlCommand1 = new SqlCommand(str1, Connection.SqlConnection);
+                SqlDataReader reader1 = sqlCommand1.ExecuteReader();
+                foreach (var x in reader1)
+                {
+                    if (reader1.GetString(0).Trim().Equals(loginEnter) &&
+                        reader1.GetString(1).Trim().Equals(passwordEnter))
+                    {
+                        flag = "teacher";
+                        break;
+                    }
+                }
+                reader1.Close();
             }
-            else return false;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            if (flag == "")
+            {
+                string str2 = $"select RECORD, SPASS from STUDENT";
+                SqlCommand sqlCommand2 = new SqlCommand(str2, Connection.SqlConnection);
+                SqlDataReader reader2 = sqlCommand2.ExecuteReader();
+                foreach (var x in reader2)
+                {
+                    if (reader2.GetInt32(0).ToString().Equals(loginEnter) &&
+                        reader2.GetString(1).Trim().Equals(passwordEnter))
+                    {
+                        flag = "student";
+                        break;
+                    }
+                }
+                reader2.Close();
+            }
+            return flag;
         }
     }
 }

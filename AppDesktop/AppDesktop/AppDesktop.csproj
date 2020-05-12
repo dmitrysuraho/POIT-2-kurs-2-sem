@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,11 @@
     </Compile>
     <Compile Include="Admin\Pages\AddTeacherPage\AddTeacherModel.cs" />
     <Compile Include="Admin\Pages\AddTeacherPage\AddTeacherViewModel.cs" />
+    <Compile Include="Admin\Pages\ChangeStudentPage\ChangeStudent.xaml.cs">
+      <DependentUpon>ChangeStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\ChangeStudentPage\ChangeStudentModel.cs" />
+    <Compile Include="Admin\Pages\ChangeStudentPage\ChangeStudentViewModel.cs" />
     <Compile Include="DataBaseConnection\Connection.cs" />
     <Compile Include="Login\LoginModel.cs" />
     <Compile Include="Login\LoginViewModel.cs" />
@@ -114,6 +120,23 @@
     <Compile Include="TeacherWindow.xaml.cs">
       <DependentUpon>TeacherWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\Pages\AddTestPage\AddTest.cs.xaml.cs">
+      <DependentUpon>AddTest.cs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Pages\AddTestPage\AddTestModel.cs" />
+    <Compile Include="Teacher\Pages\AddTestPage\AddTestViewModel.cs" />
+    <Compile Include="Teacher\Pages\AddLiteraturePage\AddLiterature.xaml.cs">
+      <DependentUpon>AddLiterature.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Pages\AddLiteraturePage\AddLiteratureModel.cs" />
+    <Compile Include="Teacher\Pages\AddLiteraturePage\AddLiteratureViewModel.cs" />
+    <Compile Include="Teacher\Pages\StudentsList\StudentsList.xaml.cs">
+      <DependentUpon>StudentsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Pages\StudentsList\StudentsListModel.cs" />
+    <Compile Include="Teacher\Pages\StudentsList\StudentsListViewModel.cs" />
+    <Compile Include="Teacher\TeacherModel.cs" />
+    <Compile Include="Teacher\TeacherViewModel.cs" />
     <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\Pages\AddTeacherPage\AddTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\ChangeStudentPage\ChangeStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,6 +197,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Teacher\Pages\AddTestPage\AddTest.cs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Pages\AddLiteraturePage\AddLiterature.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Pages\StudentsList\StudentsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -206,5 +245,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

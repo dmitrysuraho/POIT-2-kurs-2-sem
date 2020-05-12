@@ -123,7 +123,7 @@ namespace AppDesktop.Student.Pages.ProfilePage
             SqlDataReader reader = sqlCom.ExecuteReader();
             foreach (var x in reader)
             {
-                using (MemoryStream memStream = new MemoryStream(100))
+                using (MemoryStream memStream = new MemoryStream())
                 {
                     studentName = reader.GetString(2);
                     studentRecord = reader.GetInt32(0);

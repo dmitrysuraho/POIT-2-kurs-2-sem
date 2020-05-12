@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\App.xaml
-12-2054642597
+16-407314956
 
-40-1871583846
-151198144362
-AdminWindow.xaml;Admin\Pages\AddNewsPage\AddNews.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;MainWindow.xaml;StudentWindow.xaml;Student\Pages\NewsPage\News.xaml;Student\Pages\ProfilePage\Profile.xaml;Student\Pages\ProgressPage\Progress.xaml;Student\Pages\SubjectsPage\Subjects.xaml;Student\Pages\TestPage\Test.xaml;TeacherWindow.xaml;
+54500240447
+161412531098
+AdminWindow.xaml;Admin\Pages\AddNewsPage\AddNews.xaml;Admin\Pages\AddStudentPage\AddStudent.xaml;Admin\Pages\AddTeacherPage\AddTeacher.xaml;Admin\Pages\ChangeStudentPage\ChangeStudent.xaml;MainWindow.xaml;StudentWindow.xaml;Student\Pages\NewsPage\News.xaml;Student\Pages\ProfilePage\Profile.xaml;Student\Pages\ProgressPage\Progress.xaml;Student\Pages\SubjectsPage\Subjects.xaml;Student\Pages\TestPage\Test.xaml;TeacherWindow.xaml;Teacher\Pages\AddTestPage\AddTest.cs.xaml;Teacher\Pages\AddLiteraturePage\AddLiterature.xaml;Teacher\Pages\StudentsList\StudentsList.xaml;
 
 False
 

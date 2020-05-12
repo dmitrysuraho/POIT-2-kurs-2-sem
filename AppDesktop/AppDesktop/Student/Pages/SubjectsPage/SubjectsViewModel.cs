@@ -105,15 +105,14 @@ namespace AppDesktop.Student.Pages.SubjectsPage
             this.page = page;
             PageOpacity = 1;
 
-            string subj = $"select TEACHER.SUBJECT, TEACHER.TEACHER_NAME from STUDENT inner join SUBJECT on STUDENT.COURSE = SUBJECT.COURSE inner join TEACHER on SUBJECT.SUBJECT = TEACHER.SUBJECT where STUDENT.RECORD = {login}";
+            string subj = $"select SUBJECT.SUBJECT from STUDENT inner join SUBJECT on STUDENT.COURSE = SUBJECT.COURSE where STUDENT.RECORD = {login}";
             SqlCommand sqlCom = new SqlCommand(subj, Connection.SqlConnection);
             SqlDataReader reader = sqlCom.ExecuteReader();
             foreach(var x in reader)
             {
                 Subjects.Add(new SubjectsModel
                 {
-                    Subject = "Предмет: " + reader.GetString(0).Trim(),
-                    Teacher = "Преподаватель: " + reader.GetString(1).Trim()
+                    Subject = "Предмет: " + reader.GetString(0).Trim()
                 });
             }
             reader.Close();

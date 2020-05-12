@@ -1,0 +1,61 @@
+﻿<Page x:Class="AppDesktop.Admin.Pages.ChangeStudentPage.ChangeStudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppDesktop.Admin.Pages.ChangeStudentPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChangeStudent"
+      Opacity="{Binding PageOpacity}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0"
+                 Margin="10">
+            <TextBlock Text="Изменение информации о студенте"/>
+        </Viewbox>
+        <DataGrid Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  ItemsSource="{Binding Students}"
+                  SelectedItem="{Binding SelectedStudent}"
+                  Margin="30">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Фото"
+                                        IsReadOnly = "True"
+                                        Width="50">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Image Source="{Binding Data}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate >
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="1*"
+                                    Header="Имя и фамилия"
+                                    IsReadOnly="true"
+                                    Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Width="1*"
+                                    Header="Группа"
+                                    IsReadOnly="true"
+                                    Binding="{Binding Path=Group}"/>
+                <DataGridTextColumn Width="1*"
+                                    Header="Курс"
+                                    IsReadOnly="true"
+                                    Binding="{Binding Path=Course}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+        <Button Grid.Row="3"
+                Command="{Binding Cancel}"
+                Margin="350,0,350,0"
+                Content="На главную"/>
+    </Grid>
+</Page>
