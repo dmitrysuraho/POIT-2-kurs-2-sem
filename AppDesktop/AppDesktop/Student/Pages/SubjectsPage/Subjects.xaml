@@ -35,9 +35,11 @@
                         <StackPanel Margin="10">
                             <TextBlock Text="{Binding Title}"
                                        FontSize="{Binding ElementName=ChooseSubject, Path=Height}"
-                                       TextAlignment="Center"/>
+                                       TextAlignment="Center"
+                                       TextWrapping="WrapWithOverflow"/>
                             <TextBlock Text="{Binding Authors}"
-                                       TextAlignment="Center"/>
+                                       TextAlignment="Center"
+                                       TextWrapping="WrapWithOverflow"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

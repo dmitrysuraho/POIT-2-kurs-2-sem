@@ -8,7 +8,50 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChangeStudent"
       Opacity="{Binding PageOpacity}">
-
+    <Page.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="0,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*"/>
@@ -17,16 +60,30 @@
             <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0"
-                 Margin="10">
-            <TextBlock Text="Изменение информации о студенте"/>
+                 Margin="5">
+            <TextBlock Text="Изменение информации о студенте"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
         </Viewbox>
-        <DataGrid Grid.Row="1"
+        <DataGrid BorderBrush="White"
+                  Grid.Row="1"
+                  x:Name="DataGtidStudents"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   ItemsSource="{Binding Students}"
                   SelectedItem="{Binding SelectedStudent}"
-                  Margin="30">
+                  Margin="10"
+                  Background="White">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="FontFamily" Value="Comic Sans MS" />
+                    <Setter Property="Background" Value="#BA55D3"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Фото"
                                         IsReadOnly = "True"
@@ -40,22 +97,116 @@
                 <DataGridTextColumn Width="1*"
                                     Header="Имя и фамилия"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=Name}"/>
+                                    Binding="{Binding Path=Name}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
                 <DataGridTextColumn Width="1*"
                                     Header="Группа"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=Group}"/>
+                                    Binding="{Binding Path=Group}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
                 <DataGridTextColumn Width="1*"
                                     Header="Курс"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=Course}"/>
+                                    Binding="{Binding Path=Course}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
             </DataGrid.Columns>
         </DataGrid>
 
+        <Grid x:Name="ChangeInfo"
+              Grid.Row="2"
+              Visibility="Hidden"
+              Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0"
+                         HorizontalAlignment="Right">
+                    <TextBlock Text="Имя и фамилия: "
+                               FontFamily="Comic Sans MS"
+                               FontWeight="Bold"
+                               Foreground="#8B008B"/>
+                </Viewbox>
+                <Viewbox Grid.Row="1"
+                         HorizontalAlignment="Right">
+                    <TextBlock Text="Группа: "
+                               FontFamily="Comic Sans MS"
+                               FontWeight="Bold"
+                               Foreground="#8B008B"/>
+                </Viewbox>
+                <Viewbox Grid.Row="2"
+                         HorizontalAlignment="Right">
+                    <TextBlock Text="Курс: "
+                               FontFamily="Comic Sans MS"
+                               FontWeight="Bold"
+                               Foreground="#8B008B"/>
+                </Viewbox>
+            </Grid>
+            <Grid Grid.Column="1"
+                  DataContext="{Binding SelectedStudent}">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0"
+                         HorizontalAlignment="Left">
+                    <TextBox Text="{Binding Name}"
+                             Style="{StaticResource MyWaterMarkStyle}"
+                             Tag="Введите имя и фамилию"
+                             FontFamily="Comic Sans MS"
+                             Foreground="#BA55D3"/>
+                </Viewbox>
+                <Viewbox Grid.Row="1"
+                         HorizontalAlignment="Left">
+                    <TextBox Text="{Binding Group}"
+                             Style="{StaticResource MyWaterMarkStyle}"
+                             Tag="Введите группу"
+                             FontFamily="Comic Sans MS"
+                             Foreground="#BA55D3"/>
+                </Viewbox>
+                <Viewbox Grid.Row="2"
+                         HorizontalAlignment="Left">
+                    <TextBox Text="{Binding Course}"
+                             Style="{StaticResource MyWaterMarkStyle}"
+                             Tag="Введите курс"
+                             FontFamily="Comic Sans MS"
+                             Foreground="#BA55D3"/>
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Column="0"
+                    Margin="0,0,10,0"
+                    Command="{Binding Change}"
+                    HorizontalAlignment="Right"
+                    Tag="Сохранить изменения"/>
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Column="1"
+                    Margin="10,0,0,0"
+                    Command="{Binding Cancel}"
+                    HorizontalAlignment="Left"
+                    Tag="На главную"/>
+        </Grid>
         
-        <Button Grid.Row="3"
-                Command="{Binding Cancel}"
-                Margin="350,0,350,0"
-                Content="На главную"/>
     </Grid>
 </Page>

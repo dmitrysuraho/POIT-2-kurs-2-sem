@@ -4,6 +4,7 @@ FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\AdminWindow.xaml
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Admin\Pages\AddNewsPage\AddNews.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Admin\Pages\AddStudentPage\AddStudent.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Admin\Pages\AddTeacherPage\AddTeacher.xaml;;
+FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Admin\Pages\ChangeStudentPage\ChangeStudent.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\MainWindow.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\StudentWindow.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Student\Pages\NewsPage\News.xaml;;
@@ -15,5 +16,4 @@ FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\TeacherWindow.xa
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Teacher\Pages\AddTestPage\AddTest.cs.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Teacher\Pages\AddLiteraturePage\AddLiterature.xaml;;
 FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Teacher\Pages\StudentsList\StudentsList.xaml;;
-FC:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\Admin\Pages\ChangeStudentPage\ChangeStudent.xaml;;
 

@@ -11,6 +11,17 @@ namespace AppDesktop.Admin.Pages.ChangeStudentPage
 {
     class ChangeStudentModel : INotifyPropertyChanged
     {
+        private int login;
+        public int Login
+        {
+            get { return login; }
+            set
+            {
+                login = value;
+                OnPropertyChanged("Login");
+            }
+        }
+
         private string name;
         public string Name
         {

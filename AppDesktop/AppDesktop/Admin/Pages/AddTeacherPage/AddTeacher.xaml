@@ -14,10 +14,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
                             <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
@@ -34,6 +34,24 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Page.Resources>
     <Grid x:Name="GridAddTeacher"
           Grid.Row="1">
@@ -58,9 +76,12 @@
                        Text="Добавление учителя"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="20"/>
+                       FontSize="20"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <Viewbox Grid.Row="2" DataContext="{Binding Model}">
-                <TextBox
+                <TextBox Foreground="#8B008B"
                     Width="{Binding ElementName=LabelAddTeacher, Path=ActualWidth}"
                     Tag="Имя и фамилия"
                     MaxLength="30"
@@ -68,7 +89,7 @@
                     Style="{StaticResource MyWaterMarkStyle}"/>
             </Viewbox>
             <Viewbox Grid.Row="3" DataContext="{Binding Model}">
-                <TextBox
+                <TextBox Foreground="#8B008B"
                     Width="{Binding ElementName=LabelAddTeacher, Path=ActualWidth}"
                     Tag="Идентификатор"
                     MaxLength="10"
@@ -76,7 +97,7 @@
                     Style="{StaticResource MyWaterMarkStyle}"/>
             </Viewbox>
             <Viewbox Grid.Row="4" DataContext="{Binding Model}">
-                <TextBox
+                <TextBox Foreground="#8B008B"
                     Width="{Binding ElementName=LabelAddTeacher, Path=ActualWidth}"
                     Tag="Предмет"
                     MaxLength="7"
@@ -88,13 +109,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"
-                            Margin="0,0,5,0"
-                            Content="Добавить"
-                            Command="{Binding Add}"/>
-                <Button Grid.Column="1"
-                        Margin="5,0,0,0"
-                        Content="Отмена"
+                <Button Template="{StaticResource btTemplate}"
+                        Grid.Column="0"
+                        Margin="0,5,5,5"
+                        Tag="Добавить"
+                        Foreground="White"
+                        Command="{Binding Add}"/>
+                <Button Template="{StaticResource btTemplate}"
+                        Grid.Column="1"
+                        Margin="5,5,0,5"
+                        Tag="Отмена"
+                        Foreground="White"
                         Command="{Binding Cancel}"/>
             </Grid>
         </Grid>

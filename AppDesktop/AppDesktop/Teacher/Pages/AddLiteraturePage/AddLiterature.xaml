@@ -14,10 +14,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
                             <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
@@ -34,31 +34,24 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="MyWaterMarkStyleDescription" TargetType="TextBox">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TextBox">
-                        <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1" Margin="0,5,0,0"/>
-                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,5,0,0" />
-                            <Label Margin="5,5,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Text" Value=""/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
-                            </MultiTrigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Foreground" Value="DimGray"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Page.Resources>
     <Grid x:Name="GridAddNews"
           Grid.Row="1">
@@ -83,9 +76,12 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Bottom"
                        FontSize="20"
-                       Margin="0,0,0,5"/>
+                       Margin="0,0,0,5"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <Viewbox Grid.Row="2" DataContext="{Binding Model}">
-                <TextBox
+                <TextBox Foreground="#8B008B"
                     Width="{Binding ElementName=LabelAddLiterature, Path=ActualWidth}"
                     Tag="Название"
                     MaxLength="100"
@@ -93,7 +89,8 @@
                     Style="{StaticResource MyWaterMarkStyle}"/>
             </Viewbox>
             <Viewbox Grid.Row="3" DataContext="{Binding Model}">
-                <TextBox Width="{Binding ElementName=LabelAddLiterature, Path=ActualWidth}"
+                <TextBox Foreground="#8B008B" 
+                    Width="{Binding ElementName=LabelAddLiterature, Path=ActualWidth}"
                     Tag="Авторы"
                     MaxLength="100"
                     Text="{Binding Authors, UpdateSourceTrigger=PropertyChanged}"
@@ -106,9 +103,10 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Viewbox Margin="0,7,0,0">
-                    <Button                           
-                        Content="Добавить изображение"
-                        Command="{Binding AddPicture}"/>
+                    <Button Template="{StaticResource btTemplate}"
+                            Foreground="White"                        
+                            Tag="Добавить изображение"
+                            Command="{Binding AddPicture}"/>
                 </Viewbox>
                 <Image Margin="3"
                        DataContext="{Binding Model}"
@@ -120,14 +118,18 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"
-                            Margin="0,0,5,0"
-                            Content="Добавить"
-                            Command="{Binding Add}">
+                <Button Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Grid.Column="0"
+                        Margin="0,5,5,0"
+                        Tag="Добавить"
+                        Command="{Binding Add}">
                 </Button>
-                <Button Grid.Column="1"
-                        Margin="5,0,0,0"
-                        Content="Отмена"
+                <Button Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Grid.Column="1"
+                        Margin="5,5,0,0"
+                        Tag="Отмена"
                         Command="{Binding Cancel}"/>
             </Grid>
         </Grid>

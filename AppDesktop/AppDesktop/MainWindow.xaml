@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800" Closing="Window_Closing" Background="#FF9E9E9E">
+        Icon="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\icon.png"
+        Title="Авторизация" Width="800" Height="450" MinHeight="450" MinWidth="800" Closing="Window_Closing" Background="White">
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="TextBox">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
                             <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
@@ -32,31 +33,47 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--<Style x:Key="Pass" TargetType="PasswordBox">
-            <Setter Property="ItemsControl.Template">
+
+        <Style TargetType="{x:Type PasswordBox}" x:Key="MyWaterMarkStyle2">
+            <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="TextBox">
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
-                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel2" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Text" Value=""/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel2" Value="Visible"/>
                             </MultiTrigger>
                             <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Foreground" Value="DimGray"/>
+                                <Setter Property="Foreground" Value="#BA55D3"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>-->
+        </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -68,28 +85,37 @@
                     Grid.Column="1"
                     VerticalAlignment="Center">
             <TextBlock Text="Авторизация"
-                   HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center"
+                       Foreground="#8B008B"
+                       FontFamily="Comic Sans MS"/>
             <StackPanel DataContext="{Binding Model}">
                 <TextBox Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}"
                          Height="30"
                          Margin="0,0,0,5"
                          Tag="Введите логин"
                          Style="{StaticResource MyWaterMarkStyle}"
-                         MaxLength="20"/>
-                <PasswordBox Height="30"
+                         MaxLength="20"
+                         Foreground="#8B008B"/>
+                <PasswordBox Style="{StaticResource MyWaterMarkStyle2}"
+                             Height="30"
                              Margin="0,0,0,5"
                              x:Name="PasswordBox"
                              Tag="Введите пароль"
-                             MaxLength="20"/>
+                             MaxLength="20"
+                             Foreground="#8B008B"/>
             </StackPanel>
-            <Button Command="{Binding LogIn}"
+            <Button Template="{StaticResource btTemplate}"
+                    Command="{Binding LogIn}"
                     CommandParameter="{Binding ElementName=PasswordBox}"
                     Height="30"
-                    Content="Войти"/>
-            <Button Command="{Binding ForgotPassword}"
+                    Foreground="White"
+                    Tag="Войти"/>
+            <Button Template="{StaticResource btTemplate}"
+                    Command="{Binding ForgotPassword}"
                     Height="30"
                     Margin="0,5,0,0"
-                    Content="Забыл пароль (для студентов)"/>
+                    Foreground="White"
+                    Tag="Забыл пароль (для студентов)"/>
         </StackPanel>
         <StackPanel x:Name="ForgotPass"
                     Grid.Column="1"
@@ -97,23 +123,29 @@
                     Visibility="Collapsed">
             <StackPanel DataContext="{Binding Model}">
                 <TextBlock Text="Восстановление пароля"
-                   HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center"
+                           Foreground="#8B008B"
+                           FontFamily="Comic Sans MS"/>
                 <TextBox Text="{Binding LoginForChange, UpdateSourceTrigger=PropertyChanged}"
                          Height="30"
                          Margin="0,0,0,5"
                          Tag="Введите логин"
                          Style="{StaticResource MyWaterMarkStyle}"
-                         MaxLength="20"/>
+                         MaxLength="20"
+                         Foreground="#8B008B"/>
                 <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                          Style="{StaticResource MyWaterMarkStyle}"
                          Height="30"
                          Margin="0,0,0,5"
                          Tag="Введите вашу эл.почту"
-                         MaxLength="35"/>
+                         MaxLength="35"
+                         Foreground="#8B008B"/>
             </StackPanel>
-            <Button Command="{Binding GetNewPass}"
+            <Button Template="{StaticResource btTemplate}"
+                    Command="{Binding GetNewPass}"
                     Height="30"
-                    Content="Запросить новый пароль"/>
+                    Tag="Запросить новый пароль"
+                    Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>

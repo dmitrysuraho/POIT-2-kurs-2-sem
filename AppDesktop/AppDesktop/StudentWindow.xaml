@@ -5,7 +5,147 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppDesktop"
         mc:Ignorable="d"
-        Title="StudentWindow" MinHeight="500" MinWidth="800" Closing="Window_Closing" WindowState="Maximized" Background="Bisque">
+        Icon="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\icon.png"
+        Title="Студент" Width="800" Height="450" MinHeight="500" MinWidth="800" Closing="Window_Closing" Background="White">
+    <Window.Resources>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate TargetType="Button" x:Key="btTemplateProgress">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS">
+                    <Grid x:Name="Image1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\progress.png"/>
+                        <TextBlock Grid.Row="1"
+                                   Text="Успеваемость"
+                                   Margin="0,20,0,0"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate TargetType="Button" x:Key="btTemplateNews">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS">
+                    <Grid x:Name="Image1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\news.png"/>
+                        <TextBlock Grid.Row="1"
+                                   Text="Новости"
+                                   Margin="0,20,0,0"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate TargetType="Button" x:Key="btTemplateTest">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS">
+                    <Grid x:Name="Image1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\tests.png"/>
+                        <TextBlock Grid.Row="1"
+                                   Text="Тесты"
+                                   Margin="0,20,0,0"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate TargetType="Button" x:Key="btTemplateLiterature">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS">
+                    <Grid x:Name="Image1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\literature.png"/>
+                        <TextBlock Grid.Row="1"
+                                   Text="Список предметов и литературы"
+                                   Margin="0,20,0,0"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -17,21 +157,38 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Exit"
-                    Grid.Column="0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Content="Выйти"
-                    Command="{Binding Exit}"/>
-            <StackPanel Grid.Column="1">
-                <TextBlock DataContext="{Binding Model}"
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           DataContext="{Binding Model}"
                            Text="{Binding EnterStudent}"
-                           HorizontalAlignment="Center"/>
-                <Button x:Name="Profile"
-                        Margin="90,0,90,0"
-                        Content="Профиль"
-                        Command="{Binding Profile}"/>
-            </StackPanel>
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontWeight="Bold"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Template="{StaticResource btTemplate}"
+                            Margin="0,0,5,0"
+                            Grid.Column="0"
+                            x:Name="Profile"
+                            Tag="Профиль"
+                            Foreground="White"
+                            Command="{Binding Profile}"/>
+                    <Button Template="{StaticResource btTemplate}"
+                            Margin="5,0,0,0"
+                            Grid.Column="1"
+                            x:Name="Exit"
+                            Tag="Выйти"
+                            Foreground="White"
+                            Command="{Binding Exit}"/>
+                </Grid>
+            </Grid>
         </Grid>
         <Grid Grid.Row="1"
               x:Name="GridAdminControl">
@@ -45,32 +202,28 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1.3*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="addStudent"
+            <Button Template="{StaticResource btTemplateProgress}"
+                    x:Name="addStudent"
                     Grid.Row="0"
                     Grid.Column="1"
                     Margin="30"
-                    Content="Успеваемость"
                     Command="{Binding Progress}"/>
-            <Button x:Name="addTeacher"
+            <Button Template="{StaticResource btTemplateLiterature}"
+                    x:Name="addTeacher"
                     Grid.Row="0"
                     Grid.Column="2"
                     Margin="30"
-                    Command="{Binding Subjects}">
-                <TextBlock TextAlignment="Center"
-                           Text="Список предметов и литературы" 
-                           TextWrapping="Wrap"/>
-            </Button>
-            <Button x:Name="addNews"
+                    Command="{Binding Subjects}"/>
+            <Button Template="{StaticResource btTemplateNews}"
+                    x:Name="addNews"
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="30"
-                    Content="Новости"
                     Command="{Binding News}"/>
-            <Button 
+            <Button Template="{StaticResource btTemplateTest}"
                     Grid.Row="2"
                     Grid.Column="2"
                     Margin="30"
-                    Content="Тесты"
                     Command="{Binding Test}"/>
         </Grid>
         <Frame x:Name="Frame"
