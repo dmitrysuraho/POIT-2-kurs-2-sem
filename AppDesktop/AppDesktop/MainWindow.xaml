@@ -146,6 +146,12 @@
                     Height="30"
                     Tag="Запросить новый пароль"
                     Foreground="White"/>
+            <Button Template="{StaticResource btTemplate}"
+                    Command="{Binding Cancel}"
+                    Height="30"
+                    Margin="0,5,0,0"
+                    Tag="Отмена"
+                    Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>

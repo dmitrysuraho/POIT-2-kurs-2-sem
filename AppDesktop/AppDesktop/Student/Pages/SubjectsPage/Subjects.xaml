@@ -8,8 +8,26 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Subjects"
       Opacity="{Binding PageOpacity}">
-
-    <Grid>
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="0" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid Background="#BA55D3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.2*"/>
             <ColumnDefinition Width="2*"/>
@@ -17,7 +35,10 @@
         <Viewbox Grid.Column="0"
                  x:Name="ChooseSubject">
             <TextBlock Text="Выберите предмет"
-                       Margin="50"/>
+                       Margin="50"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="White"/>
         </Viewbox>
         <Grid x:Name="Literature"
               Visibility="Collapsed">
@@ -26,7 +47,6 @@
                 <RowDefinition Height="1.5*"/>
             </Grid.RowDefinitions>
             <ListBox Grid.Row="0"
-                     Background="Bisque"
                      ItemsSource="{Binding Literature}"
                      SelectedItem="{Binding SelectedLiterature}"
                      HorizontalContentAlignment="Center">
@@ -36,10 +56,14 @@
                             <TextBlock Text="{Binding Title}"
                                        FontSize="{Binding ElementName=ChooseSubject, Path=Height}"
                                        TextAlignment="Center"
-                                       TextWrapping="WrapWithOverflow"/>
+                                       TextWrapping="WrapWithOverflow"
+                                       FontFamily="Comic Sans MS"
+                                       Foreground="#8B008B"/>
                             <TextBlock Text="{Binding Authors}"
                                        TextAlignment="Center"
-                                       TextWrapping="WrapWithOverflow"/>
+                                       TextWrapping="WrapWithOverflow"
+                                       FontFamily="Comic Sans MS"
+                                       Foreground="#8B008B"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -50,7 +74,10 @@
                            Text="Теперь выберите нужную литературу(сверху)"
                            TextWrapping="Wrap"
                            HorizontalAlignment="Center"
-                           VerticalAlignment="Center"/>
+                           VerticalAlignment="Center"
+                           FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="White"/>
             </Viewbox>
             <Image Grid.Row="1"
                    DataContext="{Binding SelectedLiterature}"
@@ -63,21 +90,27 @@
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
             <ListBox Grid.Row="0"
-                     Background="Bisque"
+                     Background="White"
                      ItemsSource="{Binding Subjects}"
-                     SelectedItem="{Binding SelectedSubject}">
+                     SelectedItem="{Binding SelectedSubject}"
+                     BorderBrush="White">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10">
                             <TextBlock FontSize="{Binding ElementName=Title, Path=ActualHeight}"
-                                       Text="{Binding Subject}" />
+                                       Text="{Binding Subject}"
+                                       FontWeight="Bold"
+                                       FontFamily="Comic Sans MS"
+                                       Foreground="#8B008B"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button Grid.Row="1"
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Row="1"
                     Command="{Binding Cancel}"
-                    Content="На главную"/>
+                    Tag="На главную"/>
         </Grid>
     </Grid>
 </Page>

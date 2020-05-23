@@ -9,6 +9,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Test"
       Opacity="{Binding PageOpacity}">
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -30,16 +49,25 @@
                        FontSize="30"
                        TextWrapping="Wrap"
                        DataContext="{Binding Model}"
-                       Text="{Binding Timer}"/>
+                       Text="{Binding Timer}"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <TextBlock Grid.Row="1"
                        Text="Выберите предмет:"
                        TextAlignment="Center"
-                       VerticalAlignment="Bottom"/>
+                       VerticalAlignment="Bottom"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <ComboBox Grid.Row="2"
                       Margin="30,0,30,0"
                       Height="25"
                       ItemsSource="{Binding Subjects}"
-                      SelectedItem="{Binding SelectedSubject}">
+                      SelectedItem="{Binding SelectedSubject}"
+                      FontFamily="Comic Sans MS"
+                      FontWeight="Bold"
+                      Foreground="#BA55D3">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding SubjectName}"/>
@@ -49,12 +77,16 @@
             <Button Margin="50,0,50,50"
                     VerticalAlignment="Top"
                     Grid.Row="3"
-                    Content="Начать"
-                    Command="{Binding Start}"/>
-            <Button Margin="30,55,30,10"
+                    Tag="Начать"
+                    Command="{Binding Start}"
+                    Template="{StaticResource btTemplate}"
+                    Foreground="White"/>
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Margin="30,55,30,8"
                     VerticalAlignment="Bottom"
                     Grid.Row="4"
-                    Content="На главную"
+                    Tag="На главную"
                     Command="{Binding Cancel}"/>
         </Grid>
         <Grid x:Name="RightColumn"
@@ -70,19 +102,27 @@
                        VerticalAlignment="Center"
                        FontSize="15"
                        TextAlignment="Center"
-                       Text="{Binding SubjectName}"/>
+                       Text="{Binding SubjectName}"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <ListView Grid.Row="1" 
                       Grid.Column="1" ItemsSource="{Binding Test}"
                       SelectedItem="{Binding SelectedTest}"
                       SelectionMode="Extended"
-                      Background="Bisque"
-                      BorderBrush="Bisque"
+                      Background="White"
+                      BorderBrush="White"
                       HorizontalAlignment="Center">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="{Binding Path=Question}"/>
-                            <RadioButton Content="{Binding Path=Answer}">
+                            <TextBlock Text="{Binding Path=Question}"
+                                       FontFamily="Comic Sans MS"
+                                       FontWeight="Bold"
+                                       Foreground="#8B008B"/>
+                            <RadioButton Content="{Binding Path=Answer}"
+                                         FontFamily="Comic Sans MS"
+                                         Foreground="#8B008B">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Checked">
                                         <i:InvokeCommandAction
@@ -90,7 +130,9 @@
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </RadioButton>
-                            <RadioButton Content="{Binding Path=NoAnswer1}">
+                            <RadioButton Content="{Binding Path=NoAnswer1}"
+                                         FontFamily="Comic Sans MS"
+                                         Foreground="#8B008B">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Checked">
                                         <i:InvokeCommandAction
@@ -98,7 +140,9 @@
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </RadioButton>
-                            <RadioButton Content="{Binding Path=NoAnswer2}">
+                            <RadioButton Content="{Binding Path=NoAnswer2}"
+                                         FontFamily="Comic Sans MS"
+                                         Foreground="#8B008B">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Checked">
                                         <i:InvokeCommandAction
@@ -110,11 +154,13 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Grid.Row="2"
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Row="2"
                     Grid.Column="1"
                     Width="100"
                     Height="25"
-                    Content="Завершить тест"
+                    Tag="Завершить тест"
                     Command="{Binding EndTest}"/>
         </Grid>
     </Grid>

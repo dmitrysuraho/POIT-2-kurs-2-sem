@@ -41,7 +41,7 @@
                         <Grid>
                             <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1" Margin="0,5,0,0"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,5,0,0" />
-                            <Label Margin="0,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}"
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}"
                                 Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>

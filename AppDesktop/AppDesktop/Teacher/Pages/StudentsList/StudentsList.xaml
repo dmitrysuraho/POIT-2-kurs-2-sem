@@ -14,10 +14,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
-                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                            <Label Margin="2,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
@@ -34,6 +34,23 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -44,23 +61,31 @@
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0"
                  Margin="5">
-            <TextBlock Text="Список студентов"/>
+            <TextBlock Text="Список студентов"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
         </Viewbox>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
                 <TextBox DataContext="{Binding Model}"
+                         Foreground="#8B008B"
                          Grid.Column="0"
                          Text="{Binding Filter}"
                          Tag="Поиск"
                          Style="{StaticResource MyWaterMarkStyle}"
                          Width="100"
                          MaxLength="30"/>
-                <Button Command="{Binding Search}"
-                        Content="Поиск"
+                <Button Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Command="{Binding Search}"
+                        Tag="Поиск"
                         Width="50"/>
                 <Button Command="{Binding Clear}"
-                        Content="Очистить поиск"
+                        Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Tag="Очистить поиск"
                         Margin="10,0,0,0"/>
             </StackPanel>
         </Grid>
@@ -69,7 +94,17 @@
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   ItemsSource="{Binding Students}"
-                  Margin="30">
+                  Margin="10"
+                  BorderBrush="White"
+                  Background="White">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="FontFamily" Value="Comic Sans MS" />
+                    <Setter Property="Background" Value="#BA55D3"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Фото"
                                         IsReadOnly = "True"
@@ -83,24 +118,38 @@
                 <DataGridTextColumn Width="1*"
                                     Header="Имя и фамилия"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=StudentName}"/>
+                                    Binding="{Binding Path=StudentName}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
                 <DataGridTextColumn Width="1*"
                                     Header="Группа"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=StudentGroup}"/>
+                                    Binding="{Binding Path=StudentGroup}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
                 <DataGridTextColumn Width="1*"
                                     Header="Курс"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=StudentCourse}"/>
+                                    Binding="{Binding Path=StudentCourse}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
                 <DataGridTextColumn Width="1*"
                                     Header="Специальность"
                                     IsReadOnly="true"
-                                    Binding="{Binding Path=StudentProfession}"/>
+                                    Binding="{Binding Path=StudentProfession}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Row="3"
-                Content="На главную"
-                Margin="350,5,350,5"
+        <Button Template="{StaticResource btTemplate}"
+                Foreground="White"
+                Grid.Row="3"
+                Tag="На главную"
+                Margin="350,5,350,0"
                 Command="{Binding Cancel}"/>
     </Grid>
 </Page>

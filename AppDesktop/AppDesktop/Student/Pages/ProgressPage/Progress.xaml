@@ -8,7 +8,50 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Progress"
       Opacity="{Binding PageOpacity}">
-
+    <Page.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="0,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -23,28 +66,49 @@
             </Grid.RowDefinitions>
             <Viewbox Grid.Row="0"
                      Margin="15">
-                <TextBlock Text="Успеваемость"/>
+                <TextBlock Text="Успеваемость"
+                           FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"/>
             </Viewbox>
             <DataGrid Grid.Row="1"
                       ItemsSource="{Binding Notes}"
                       CanUserDeleteRows="False"
                       AutoGenerateColumns="False"
-                      CanUserAddRows="False">
+                      CanUserAddRows="False"
+                      BorderBrush="White"
+                      Background="White">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="FontFamily" Value="Comic Sans MS" />
+                        <Setter Property="Background" Value="#BA55D3"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Subject}"
                                         Width="*"
                                         IsReadOnly="True"
-                                        Header="Предмет"/>
+                                        Header="Предмет"
+                                        FontFamily="Comic Sans MS"
+                                        FontWeight="Bold"
+                                        Foreground="#BA55D3"/>
                     <DataGridTextColumn Binding="{Binding Path=Note}"
                                         Width="*"
                                         IsReadOnly="True"
-                                        Header="Отметка"/>
+                                        Header="Отметка"
+                                        FontFamily="Comic Sans MS"
+                                        FontWeight="Bold"
+                                        Foreground="#BA55D3"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Grid.Row="2"
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Row="2"
                     Margin="120,20,120,20"
                     Command="{Binding Cancel}"
-                    Content="На главную"/>
+                    Tag="На главную"/>
         </Grid>
         
     </Grid>

@@ -14,10 +14,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid>
-                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <Border Background="White" BorderBrush="#BA55D3" BorderThickness="1"/>
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
                             <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
-                                Visibility="Hidden" Foreground="Gray" FontFamily="Arial"/>
+                                Visibility="Hidden" Foreground="#BA55D3" FontFamily="Comic Sans MS"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
@@ -34,6 +34,24 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="5" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -67,85 +85,112 @@
                        Source="{Binding Data}"/>
                 <Button Grid.Row="1"
                         Width="{Binding ElementName=Image, Path=ActualWidth}"
-                        Content="Сменить"
-                        Command="{Binding ChangeImage}"/>
+                        Tag="Сменить"
+                        Command="{Binding ChangeImage}"
+                        Template="{StaticResource btTemplate}"
+                        Foreground="White"/>
             </Grid>
             <Viewbox Margin="15"
                      Grid.Row="0"
                      Grid.Column="1"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left">
-                <TextBlock 
-                       DataContext="{Binding Model}"
-                       Text="{Binding StudentName}"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           DataContext="{Binding Model}"
+                           Text="{Binding StudentName}"/>
             </Viewbox>
             <Viewbox Margin="15"
                      HorizontalAlignment="Right"
                      Grid.Row="1">
-                <TextBlock 
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
                            Grid.Column="0"
                            Text="Зачетка:"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Row="2"
                      HorizontalAlignment="Right">
-                <TextBlock
-                       Grid.Column="0"
-                       Text="Курс:"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           Grid.Column="0"
+                           Text="Курс:"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Row="3"
                      HorizontalAlignment="Right">
-                <TextBlock 
-                       Grid.Column="0"
-                       Text="Группа:"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           Grid.Column="0"
+                           Text="Группа:"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Row="4"
                      HorizontalAlignment="Right">
-                <TextBlock 
-                       Grid.Column="0"
-                       Text="Спец:"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           Grid.Column="0"
+                           Text="Спец:"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Column="1"
                      Grid.Row="1"
                      HorizontalAlignment="left">
-                <TextBlock 
-                       DataContext="{Binding Model}"
-                       Text="{Binding StudentRecord}"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           DataContext="{Binding Model}"
+                           Text="{Binding StudentRecord}"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Column="1"
                      Grid.Row="2"
                      HorizontalAlignment="left">
-                <TextBlock DataContext="{Binding Model}"
-                       Text="{Binding StudentCourse}"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           DataContext="{Binding Model}"
+                           Text="{Binding StudentCourse}"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Column="1"
                      Grid.Row="3"
                      HorizontalAlignment="left">
-                <TextBlock DataContext="{Binding Model}"
-                       Text="{Binding StudentGroup}"/>
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           DataContext="{Binding Model}"
+                           Text="{Binding StudentGroup}"/>
             </Viewbox>
             <Viewbox Margin="15"
                      Grid.Column="1"
                      Grid.Row="4"
                      HorizontalAlignment="left">
-                <TextBlock DataContext="{Binding Model}"
+                <TextBlock FontFamily="Comic Sans MS"
+                           FontWeight="Bold"
+                           Foreground="#8B008B"
+                           DataContext="{Binding Model}"
                            Text="{Binding StudentProfession}"/>
             </Viewbox>
             <Button Grid.Row="5"
                     Grid.Column="0"
-                    Margin="37,0,37,5"
-                    Content="Сменить пароль"
-                    Command="{Binding ChangePass}"/>
+                    Margin="35,0,35,5"
+                    Tag="Сменить пароль"
+                    Command="{Binding ChangePass}"
+                    Template="{StaticResource btTemplate}"
+                    Foreground="White"/>
             <Button Grid.Row="5"
                     Grid.Column="1"
                     Margin="45,0,45,5"
-                    Content="На главную"
-                    Command="{Binding Cancel}"/>
+                    Tag="На главную"
+                    Command="{Binding Cancel}"
+                    Template="{StaticResource btTemplate}"
+                    Foreground="White"/>
         </Grid>
         <Grid Visibility="Collapsed"
               x:Name="ChangePassword"
@@ -159,19 +204,24 @@
                        VerticalAlignment="Bottom"
                        HorizontalAlignment="Center"
                        Text="Смена пароля"
-                       FontSize="15"/>
+                       FontSize="15"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="#8B008B"/>
             <StackPanel Grid.Row="1"
                         DataContext="{Binding ChangeModel}">
                 <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                         Foreground="#8B008B"
                          Height="30"
-                         Margin="93,5,93,5"
+                         Margin="92,5,92,5"
                          x:Name="PasswordOld"
                          Tag="Введите старый пароль"
                          MaxLength="20"
                          Text="{Binding OldPass}"/>
                 <TextBox Style="{StaticResource MyWaterMarkStyle}"
+                         Foreground="#8B008B"
                          Height="30"
-                         Margin="93,0,93,0"
+                         Margin="92,0,92,0"
                          x:Name="PasswordNew"
                          Tag="Введите новый пароль"
                          MaxLength="20"
@@ -183,17 +233,21 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"
+                <Button Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Grid.Column="0"
                         Command="{Binding Change}"
                         Height="30"
                         Margin="0,0,5,0"
-                        Content="Сменить"
+                        Tag="Сменить"
                         VerticalAlignment="Top"/>
-                <Button Grid.Column="1"
+                <Button Template="{StaticResource btTemplate}"
+                        Foreground="White"
+                        Grid.Column="1"
                         Command="{Binding CancelChange}"
                         Height="30"
                         Margin="5,0,0,0"
-                        Content="Отмена"
+                        Tag="Отмена"
                         VerticalAlignment="Top"/>
             </Grid>
         </Grid>

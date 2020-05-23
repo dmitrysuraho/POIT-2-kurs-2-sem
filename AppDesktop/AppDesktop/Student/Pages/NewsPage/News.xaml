@@ -9,8 +9,26 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="News"
       Opacity="{Binding PageOpacity}">
-
-    <Grid>
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="0" BorderBrush="#8B008B" BorderThickness="2"
+                    Background="#BA55D3" x:Name="buttonBorder">
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" 
+                                FontFamily="Comic Sans MS" 
+                                Content="{TemplateBinding Tag}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#9932CC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#BA55D3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid Background="#BA55D3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.2*"/>
             <ColumnDefinition Width="2*"/>
@@ -19,7 +37,10 @@
             <TextBlock Text="Выберите новость"
                        FontSize="{Binding ElementName=Title, Path=Height}"
                        x:Name="ChooseNews"
-                       Margin="50"/>
+                       Margin="50"
+                       FontFamily="Comic Sans MS"
+                       FontWeight="Bold"
+                       Foreground="White"/>
         </Viewbox>
         <Grid DataContext="{Binding SelectedNews}"
               Grid.Column="0">
@@ -31,16 +52,20 @@
             <TextBlock x:Name="Title"
                    Grid.Row="0"
                    Text="{Binding Title}"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center"
+                   FontFamily="Comic Sans MS"
+                   Foreground="White"/>
             <Image Grid.Row="1"
                    Source="{Binding Data}"
                    Margin="20"/>
             <ScrollViewer Grid.Row="2"  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                <TextBlock 
+                <TextBlock
                        TextAlignment="Center"
                        Text="{Binding Description}"
                        TextWrapping="Wrap"
-                       Margin="20,0,20,20"/>
+                       Margin="20,0,20,20"
+                       FontFamily="Comic Sans MS"
+                       Foreground="White"/>
             </ScrollViewer>
         </Grid>
         <Grid Grid.Column="1">
@@ -49,23 +74,32 @@
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
             <ListBox Grid.Row="0"
-                     Background="Bisque"
+                     Background="White"
+                     BorderBrush="White"
                      ItemsSource="{Binding News}"
                      SelectedItem="{Binding SelectedNews}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock FontSize="{Binding ElementName=Title, Path=ActualHeight}"
-                                       Text="{Binding Title}" />
+                                       Text="{Binding Title}" 
+                                       FontFamily="Comic Sans MS"
+                                       FontWeight="Bold"
+                                       Foreground="#8B008B"/>
                             <TextBlock Margin="0,10,0,0"
-                                       Text="{Binding Date}"/>
+                                       Text="{Binding Date}"
+                                       FontFamily="Comic Sans MS"
+                                       FontWeight="Bold"
+                                       Foreground="#8B008B"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Button Grid.Row="1"
+            <Button Template="{StaticResource btTemplate}"
+                    Foreground="White"
+                    Grid.Row="1"
                     Command="{Binding Cancel}"
-                    Content="На главную"/>
+                    Tag="На главную"/>
         </Grid>
     </Grid>
 </Page>

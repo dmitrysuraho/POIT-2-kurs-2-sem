@@ -48,6 +48,20 @@ namespace Students.MainWindow
             }
         }
 
+        private Command cancel;
+        public Command Cancel
+        {
+            get
+            {
+                return cancel ??
+                  (cancel = new Command(obj =>
+                  {
+                      mainWindow.Log.Visibility = Visibility.Visible;
+                      mainWindow.ForgotPass.Visibility = Visibility.Collapsed;
+                  }));
+            }
+        }
+
         private Command getNewPass;
         public Command GetNewPass
         {

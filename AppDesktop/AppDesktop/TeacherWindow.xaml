@@ -127,6 +127,10 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                   Source="C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\logo.png"
+                   HorizontalAlignment="Left"
+                   Margin="5,0,0,0"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -138,6 +142,7 @@
                        HorizontalAlignment="Center"
                        Foreground="#8B008B"
                        FontWeight="Bold"
+                       FontFamily="Comic Sans MS"
                        VerticalAlignment="Center"/>
                 <Button Template="{StaticResource btTemplate}"
                         Margin="70,0,70,0"

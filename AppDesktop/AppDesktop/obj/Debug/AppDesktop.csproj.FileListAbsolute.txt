@@ -54,3 +54,4 @@ C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Teacher\Pages\StudentsList\StudentsList.baml
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\ChangeStudentPage\ChangeStudent.g.cs
 C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\Admin\Pages\ChangeStudentPage\ChangeStudent.baml
+C:\Users\Dmitry\Desktop\Курсовой\AppDesktop\AppDesktop\obj\Debug\AppDesktop.csprojAssemblyReference.cache
