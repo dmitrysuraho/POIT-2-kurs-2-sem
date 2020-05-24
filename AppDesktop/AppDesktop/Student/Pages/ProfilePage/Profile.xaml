@@ -216,7 +216,7 @@
                          Margin="92,5,92,5"
                          x:Name="PasswordOld"
                          Tag="Введите старый пароль"
-                         MaxLength="20"
+                         MaxLength="9"
                          Text="{Binding OldPass}"/>
                 <TextBox Style="{StaticResource MyWaterMarkStyle}"
                          Foreground="#8B008B"
@@ -224,7 +224,7 @@
                          Margin="92,0,92,0"
                          x:Name="PasswordNew"
                          Tag="Введите новый пароль"
-                         MaxLength="20"
+                         MaxLength="9"
                          Text="{Binding NewPass}"/>
             </StackPanel>
             <Grid Grid.Row="2"
