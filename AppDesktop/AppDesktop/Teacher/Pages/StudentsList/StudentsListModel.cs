@@ -66,6 +66,17 @@ namespace AppDesktop.Teacher.Pages.StudentsList
             }
         }
 
+        private int studentNote;
+        public int StudentNote
+        {
+            get { return studentNote; }
+            set
+            {
+                studentNote = value;
+                OnPropertyChanged("StudentNote");
+            }
+        }
+
         private BitmapImage data;
         public BitmapImage Data
         {

@@ -46,6 +46,9 @@
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="PasswordChar" Value=""/>
+                                </MultiTrigger.Conditions>
                                 <Setter Property="Visibility" TargetName="WaterMarkLabel2" Value="Visible"/>
                             </MultiTrigger>
                             <Trigger Property="IsEnabled" Value="False">

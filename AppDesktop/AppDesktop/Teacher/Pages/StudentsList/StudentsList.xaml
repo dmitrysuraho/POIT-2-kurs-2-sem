@@ -143,6 +143,13 @@
                                     FontFamily="Comic Sans MS"
                                     FontWeight="Bold"
                                     Foreground="#BA55D3"/>
+                <DataGridTextColumn Width="1*"
+                                    Header="Отметка"
+                                    IsReadOnly="true"
+                                    Binding="{Binding Path=StudentNote}"
+                                    FontFamily="Comic Sans MS"
+                                    FontWeight="Bold"
+                                    Foreground="#BA55D3"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Template="{StaticResource btTemplate}"

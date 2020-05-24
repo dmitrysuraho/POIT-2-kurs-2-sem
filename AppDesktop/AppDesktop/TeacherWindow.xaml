@@ -140,7 +140,6 @@
                        DataContext="{Binding Model}"
                        Text="{Binding EnterTeacher}"
                        HorizontalAlignment="Center"
-                       Foreground="#8B008B"
                        FontWeight="Bold"
                        FontFamily="Comic Sans MS"
                        VerticalAlignment="Center"/>

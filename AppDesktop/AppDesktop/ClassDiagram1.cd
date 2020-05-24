@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="AppDesktop.Admin.AdminModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.5" Y="3.75" Width="1.5" />
+    <Position X="16.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Admin\AdminModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Admin.AdminViewModel" BaseTypeListCollapsed="true">
-    <Position X="14.5" Y="5.25" Width="1.5" />
+  <Class Name="AppDesktop.Admin.AdminViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgACAAIAAgIAAAAAAEhAAABAgA4AgIAmQIAAI=</HashCode>
       <FileName>Admin\AdminViewModel.cs</FileName>
@@ -30,15 +30,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Admin.Pages.AddNewsPage.AddNewsModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="23.75" Width="1.5" />
+    <Position X="16.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAgAAAAIAAAAAQAgAAEAAAABEAAAABAAAA=</HashCode>
       <FileName>Admin\Pages\AddNewsPage\AddNewsModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Admin.Pages.AddNewsPage.AddNewsViewModel" BaseTypeListCollapsed="true">
-    <Position X="14" Y="19.25" Width="1.5" />
+  <Class Name="AppDesktop.Admin.Pages.AddNewsPage.AddNewsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAJAAAAAQAAAAAAEIAAABAAEgAAABAAAgAgAAAQKAAA=</HashCode>
       <FileName>Admin\Pages\AddNewsPage\AddNewsViewModel.cs</FileName>
@@ -58,15 +58,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Admin.Pages.AddStudentPage.AddStudentModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="23.5" Width="1.5" />
+    <Position X="14.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAIEAEAAAAAAgAAAIIAAAAQAgAAEAAACAAAAAAAABAA=</HashCode>
       <FileName>Admin\Pages\AddStudentPage\AddStudentModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Admin.Pages.AddStudentPage.AddStudentViewModel" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="19.25" Width="1.5" />
+  <Class Name="AppDesktop.Admin.Pages.AddStudentPage.AddStudentViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAJAAAAAQAAAAAAEIAAABAAAgAAAAAAAgAgAAAQKAAA=</HashCode>
       <FileName>Admin\Pages\AddStudentPage\AddStudentViewModel.cs</FileName>
@@ -86,15 +86,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Admin.Pages.AddTeacherPage.AddTeacherModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.5" Y="23.5" Width="1.5" />
+    <Position X="12.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAIAAAACAIIAAAASAgAAEAAACAAAAAAAAAAA=</HashCode>
       <FileName>Admin\Pages\AddTeacherPage\AddTeacherModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Admin.Pages.AddTeacherPage.AddTeacherViewModel" BaseTypeListCollapsed="true">
-    <Position X="10.5" Y="19.25" Width="1.5" />
+  <Class Name="AppDesktop.Admin.Pages.AddTeacherPage.AddTeacherViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAJAAAAAQAAAAAAEIAAABAAAgAAAAAAAgAgAAAQKAAA=</HashCode>
       <FileName>Admin\Pages\AddTeacherPage\AddTeacherViewModel.cs</FileName>
@@ -114,28 +114,28 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Admin.Pages.ChangeStudentPage.ChangeStudentModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16" Y="24.25" Width="1.5" />
+    <Position X="18.25" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAEAAAAAAgAAAIIAAAAQAgAAEABAAAAAQAAAAEAA=</HashCode>
       <FileName>Admin\Pages\ChangeStudentPage\ChangeStudentModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Admin.Pages.ChangeStudentPage.ChangeStudentViewModel" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="19.25" Width="1.5" />
+  <Class Name="AppDesktop.Admin.Pages.ChangeStudentPage.ChangeStudentViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAJAAEAAQABAAAAEMAAABAAAgAAAAAgAgAgIAAQIAQA=</HashCode>
       <FileName>Admin\Pages\ChangeStudentPage\ChangeStudentViewModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="adminWindow" />
-      <Property Name="Model" />
       <Property Name="SelectedStudent" />
+      <Property Name="Model" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.AdminWindow" BaseTypeListCollapsed="true">
-    <Position X="7" Y="11.75" Width="1.5" />
+  <Class Name="AppDesktop.AdminWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AdminWindow.xaml.cs</FileName>
@@ -149,8 +149,8 @@
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AppDesktop.MainWindow" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="2.5" Width="1.5" />
+  <Class Name="AppDesktop.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
@@ -158,15 +158,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.StudentWindow" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="33.5" Width="1.5" />
+    <Position X="15.5" Y="17.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StudentWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.TeacherWindow" BaseTypeListCollapsed="true">
-    <Position X="20" Y="12.5" Width="1.5" />
+  <Class Name="AppDesktop.TeacherWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TeacherWindow.xaml.cs</FileName>
@@ -181,17 +181,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AppDesktop.Login.LoginModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8.75" Y="8.25" Width="1.5" />
+    <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAACAAAAAgIAAAAAAAgAAAAAACAAAQBAAAEAQ=</HashCode>
       <FileName>Login\LoginModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Students.MainWindow.LoginViewModel" BaseTypeListCollapsed="true">
-    <Position X="11" Y="5.25" Width="1.5" />
+  <Class Name="Students.MainWindow.LoginViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAEBAAAAAAAAIAAAAAgAhAAIABACAAkAAAAIAAA=</HashCode>
+      <HashCode>AABQAAEBQAAAAAAAIAAAAAgAhAAIABACAAkAAAAIAAA=</HashCode>
       <FileName>Login\LoginViewModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -221,7 +221,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.NewsPage.News" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="4.25" Width="1.5" />
+    <Position X="18.25" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Student\Pages\NewsPage\News.xaml.cs</FileName>
@@ -229,15 +229,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.NewsPage.NewsModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.5" Y="31.25" Width="1.5" />
+    <Position X="17.75" Y="16" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAgAEAAIAAAAAAAgAAAABABAAAQAQAAAAA=</HashCode>
       <FileName>Student\Pages\NewsPage\NewsModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.Pages.NewsPage.NewsViewModel" BaseTypeListCollapsed="true">
-    <Position X="15.5" Y="27" Width="1.5" />
+  <Class Name="AppDesktop.Student.Pages.NewsPage.NewsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAFAAAAAQAAAAABEIAAAJAAAgCAAAAAAAAAAAAQBAQA=</HashCode>
       <FileName>Student\Pages\NewsPage\NewsViewModel.cs</FileName>
@@ -250,7 +250,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.ProfilePage.Profile" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="4.25" Width="1.5" />
+    <Position X="20.25" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Student\Pages\ProfilePage\Profile.xaml.cs</FileName>
@@ -258,15 +258,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.ProfilePage.ProfileModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="17.25" Y="33.25" Width="1.5" />
+    <Position X="21.75" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACBAAAAQEAAAEAIAAKAgAAggIAABACAEAYAABAAwQ=</HashCode>
       <FileName>Student\Pages\ProfilePage\ProfileModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.Pages.ProfilePage.ProfileViewModel" BaseTypeListCollapsed="true">
-    <Position X="17.25" Y="27" Width="1.5" />
+  <Class Name="AppDesktop.Student.Pages.ProfilePage.ProfileViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABIQEAASEBAAAVEIAABBAAAgAAAEAAAAAgAAAQIFQA=</HashCode>
       <FileName>Student\Pages\ProfilePage\ProfileViewModel.cs</FileName>
@@ -287,15 +287,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.ProgressPage.ProgressModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="25.75" Width="1.5" />
+    <Position X="15.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAIIAAAACAgAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Student\Pages\ProgressPage\ProgressModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.Pages.ProgressPage.ProgressViewModel" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="27" Width="1.5" />
+  <Class Name="AppDesktop.Student.Pages.ProgressPage.ProgressViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABgAAAAQAAAAABEIAAABAAAgAAAAAAAAAAAAAQAEAA=</HashCode>
       <FileName>Student\Pages\ProgressPage\ProgressViewModel.cs</FileName>
@@ -314,23 +314,23 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.SubjectsPage.SubjectsModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="27.5" Width="1.5" />
+    <Position X="10.75" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAQAAAAEAAIIAAAACAgABAABAAQAAQAAABAAA=</HashCode>
       <FileName>Student\Pages\SubjectsPage\SubjectsModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.Pages.SubjectsPage.SubjectsViewModel" BaseTypeListCollapsed="true">
-    <Position X="10" Y="27" Width="1.5" />
+  <Class Name="AppDesktop.Student.Pages.SubjectsPage.SubjectsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAVAQQAAAAABEMAAABAAAgAAAAAAAAAAAAAQAERE=</HashCode>
       <FileName>Student\Pages\SubjectsPage\SubjectsViewModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="studentWindow" />
-      <Property Name="SelectedLiterature" />
       <Property Name="SelectedSubject" />
+      <Property Name="SelectedLiterature" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -343,37 +343,37 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.Pages.TestPage.TestModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="33" Width="1.5" />
+    <Position X="14.25" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAQAAAAAgAAIAIAAoAACAAAEggQABAAEIIAAAiAEAAI=</HashCode>
       <FileName>Student\Pages\TestPage\TestModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.Pages.TestPage.TestViewModel" BaseTypeListCollapsed="true">
-    <Position X="11.75" Y="27" Width="1.5" />
+  <Class Name="AppDesktop.Student.Pages.TestPage.TestViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QATAAFAAQCAAAABkIAAABAAAgAAAAAAIAAgACAQMkBA=</HashCode>
       <FileName>Student\Pages\TestPage\TestViewModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="studentWindow" />
-      <Property Name="SelectedTest" />
       <Property Name="SelectedSubject" />
+      <Property Name="SelectedTest" />
       <Property Name="Model" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Student.StudentModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="8.5" Width="1.5" />
+    <Position X="19.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAIAAAAAAAgAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Student\StudentModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Student.StudentViewModel" BaseTypeListCollapsed="true">
-    <Position X="16.25" Y="5.25" Width="1.5" />
+  <Class Name="AppDesktop.Student.StudentViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAEAAEAAAAAAAABAIAAAAAAAhAAAEAAIYJgACmSJEAI=</HashCode>
       <FileName>Student\StudentViewModel.cs</FileName>
@@ -394,15 +394,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Teacher.Pages.AddLiteraturePage.AddLiteratureModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="16.5" Width="1.5" />
+    <Position X="15.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAQAAAAEAAIAAAAAAAgABEAAAAREAAAABAEAA=</HashCode>
       <FileName>Teacher\Pages\AddLiteraturePage\AddLiteratureModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Teacher.Pages.AddLiteraturePage.AddLiteratureViewModel" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="11.75" Width="1.5" />
+  <Class Name="AppDesktop.Teacher.Pages.AddLiteraturePage.AddLiteratureViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAJAAAAAQAAAAAAEIAAABAAEgAAABAAAAQgAAAQKAAA=</HashCode>
       <FileName>Teacher\Pages\AddLiteraturePage\AddLiteratureViewModel.cs</FileName>
@@ -422,15 +422,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Teacher.Pages.AddTestPage.AddTestModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8.5" Y="14.25" Width="1.5" />
+    <Position X="10.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAgAAAAIAAIAAAAAAAgARAAAAEAAAAAgAAEAI=</HashCode>
       <FileName>Teacher\Pages\AddTestPage\AddTestModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Teacher.Pages.AddTestPage.AddTestViewModel" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="11.75" Width="1.5" />
+  <Class Name="AppDesktop.Teacher.Pages.AddTestPage.AddTestViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAQAAAAAAFIAACBQAAggAAAAAEAQgAAAQIEAA=</HashCode>
       <FileName>Teacher\Pages\AddTestPage\AddTestViewModel.cs</FileName>
@@ -450,15 +450,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Teacher.Pages.StudentsList.StudentsListModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="17.5" Width="1.5" />
+    <Position X="17" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACBAAAAQAAAAEAIAAAEgAAgBIAABAAAAAQAAAAAgQ=</HashCode>
+      <HashCode>AAAKBAAAAQAAAAEAIAAAEgAAgBIAABAAAAAQAAAACgQ=</HashCode>
       <FileName>Teacher\Pages\StudentsList\StudentsListModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AppDesktop.Teacher.Pages.StudentsList.StudentsListViewModel" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="11.75" Width="1.5" />
+  <Class Name="AppDesktop.Teacher.Pages.StudentsList.StudentsListViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEJAAAAAQAAAAAAEIAAABAAAgAAAAAAAASgAAARoEQA=</HashCode>
       <FileName>Teacher\Pages\StudentsList\StudentsListViewModel.cs</FileName>
@@ -470,14 +470,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AppDesktop.Teacher.TeacherModel" Collapsed="true">
-    <Position X="10.25" Y="10" Width="1.5" />
+    <Position X="13" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAIAAAAgAAgAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Teacher\TeacherModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AppDesktop.Teacher.TeacherViewModel" BaseTypeListCollapsed="true">
-    <Position X="12.75" Y="5.25" Width="1.5" />
+  <Class Name="AppDesktop.Teacher.TeacherViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAICAAAAAgAABIAAAAQAAhAAAAAAAYQgAAmQIEAI=</HashCode>
       <FileName>Teacher\TeacherViewModel.cs</FileName>

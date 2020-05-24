@@ -80,21 +80,24 @@ namespace Students.MainWindow
                       }
                       else
                       {
+
                           Random rnd = new Random();
                           int value = rnd.Next(1000, 9999);
                           string str = $"update STUDENT set SPASS = '{GetHash(value.ToString())}' where RECORD = {model.LoginForChange}";
                           SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
                           int num = sqlCommand.ExecuteNonQuery();
-
                           if (num == 0)
                               MessageBox.Show("Неверный логин");
-                          else
+                          else 
+                          {
                               SendMail(model.Email, value);
+                              mainWindow.Log.Visibility = Visibility.Visible;
+                              mainWindow.ForgotPass.Visibility = Visibility.Collapsed;
+                          }
+                              
                       }
                       model.LoginForChange = "";
                       model.Email = "";
-                      mainWindow.Log.Visibility = Visibility.Visible;
-                      mainWindow.ForgotPass.Visibility = Visibility.Collapsed;
                   }));
             }
         }
@@ -175,10 +178,15 @@ namespace Students.MainWindow
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "F.d2001l5");
-
-                smtpClient.Send(mailMessage);
-
-                MessageBox.Show("Письмо отправлено, проверьте почту");
+                try
+                {
+                    smtpClient.Send(mailMessage);
+                    MessageBox.Show("Письмо отправлено, проверьте почту");
+                }
+                catch
+                {
+                    MessageBox.Show("Не удалось отправить письмо");
+                }
             }
         }
     }

@@ -102,7 +102,10 @@ namespace AppDesktop.Teacher.Pages.StudentsList
             PageOpacity = 1;
             Model = new StudentsListModel();
 
-            string str = $"select STUDENT.NAME, STUDENT.IDGROUP, STUDENT.COURSE, GROUPS.PROFESSION, STUDENT.PICTURE from STUDENT inner join GROUPS on STUDENT.IDGROUP = GROUPS.IDGROUP";
+            string str = $"select STUDENT.NAME, STUDENT.IDGROUP, STUDENT.COURSE, GROUPS.PROFESSION, STUDENT.PICTURE, PROGRESS.NOTE " +
+                $"from STUDENT inner join GROUPS on STUDENT.IDGROUP = GROUPS.IDGROUP inner join SUBJECT on STUDENT.COURSE = SUBJECT.COURSE " +
+                $"inner join TEACHER on SUBJECT.SUBJECT = TEACHER.SUBJECT left outer join PROGRESS on SUBJECT.SUBJECT = PROGRESS.SUBJECT" +
+                $" where TEACHER.TEACHER = '{login}'";
             SqlCommand sqlCommand = new SqlCommand(str, Connection.SqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
             foreach (var x in reader)
@@ -113,13 +116,20 @@ namespace AppDesktop.Teacher.Pages.StudentsList
                     memStream.Write(arr, 0, arr.Length);
                     Bitmap bm = new Bitmap(memStream);
 
+                    int note = 0;
+                    if(!reader.IsDBNull(reader.GetOrdinal("NOTE")))
+                    {
+                        note = reader.GetInt32(5);
+                    }
+
                     Students.Add(new StudentsListModel
                     {
                         StudentName = reader.GetString(0).Trim(),
                         StudentGroup = reader.GetInt32(1),
                         StudentCourse = reader.GetInt32(2),
                         StudentProfession = reader.GetString(3),
-                        Data = BitmapToImageSource(bm)
+                        Data = BitmapToImageSource(bm),
+                        StudentNote = note
                     });
                 }
             }
