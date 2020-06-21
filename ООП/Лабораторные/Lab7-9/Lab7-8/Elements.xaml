@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Lab7_8">
+    <Label x:Key="nowCal" FontWeight="Bold" FontStyle="Italic" FontSize="15"
+                   HorizontalAlignment="Center" Content="{DynamicResource m_nowCal}"
+                   Margin="0, 10, 0, 0"/>
+    <Label x:Key="stype" Content="{DynamicResource m_stype}"/>
+    <Label x:Key="sdescr" Content="{DynamicResource m_sdescr}"/>
+    <Label x:Key="filtration" Margin="0,10,0,5" Content="{DynamicResource m_filtration}"
+                       HorizontalAlignment="Center" Foreground="#FFD84E1A" Background="#FF91E0D5"/>
+
+    <Grid x:Key="dataGridHead" Margin="5,5,5,0" Height="18" Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="130"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="0" Text="{DynamicResource m_type}"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="1" Text="{DynamicResource m_descr}"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="2" Text="{DynamicResource m_status}"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="3" Text="{DynamicResource m_startDate}"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Column="4" Text="{DynamicResource m_endDate}"/>
+    </Grid>
+</ResourceDictionary>

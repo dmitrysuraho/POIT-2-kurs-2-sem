@@ -1,0 +1,8 @@
+<suite name="TestSuite">
+<test name="TestForLab">
+    <classes>
+        <class name="com.company.TestLabTest" />
+        <class name="com.company.TestStudentClass" />
+    </classes>
+</test>
+</suite>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4090b3fd-4037-40b1-9478-694cd26612fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Street.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab9.1/Lab9.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3-4/com/company/TestLabTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3-4/com/company/TestLabTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3-4/com/company/TestStudentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3-4/com/company/TestStudentClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TestLabTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestLabTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TestStudentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TestStudentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/META-INF/Lab6.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Office.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/БД_л14_Транзакции.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/БД_л14_Транзакции.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/.vs/Lab9/v15/.ssms_suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/.vs/Lab9/v15/.ssms_suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/Lab9/SQLQuery1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/Lab9/SQLQuery1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ОЗИ/Otchet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ОЗИ/Otchet.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/10_UserControl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/10_UserControl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Lab7-8.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Lab7-8.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.ru-RU.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.ru-RU.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Task/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Task/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/json.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/json.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.ru-RU.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.ru-RU.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.i.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="TestNG Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1YWMUxNnt1IkYNZoUaeWagdJxZl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dmitry\Desktop\labs\Java\Лабораторные\Lab3-5\src\com\company" />
+      <recent name="C:\Users\Dmitry\Desktop\labs\Java\Лабораторные\Lab3-5\files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/Dmitry/Desktop/labs/Java/Лабораторные/Lab3-5/src/com/company/Suite.xml">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Lab3-4" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Dmitry/Desktop/labs/Java/Лабораторные/Lab3-5/src/com/company/Suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Lab3-4" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/com/company/Suite.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLabTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Lab3-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestLabTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLabTest.Test_Choose" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Lab3-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestLabTest" />
+      <option name="METHOD_NAME" value="Test_Choose" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStudentClass" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Lab3-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestStudentClass" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="SUITE_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.TestLabTest" />
+      <item itemvalue="TestNG.TestLabTest.Test_Choose" />
+      <item itemvalue="TestNG.C:/Users/Dmitry/Desktop/labs/Java/Лабораторные/Lab3-5/src/com/company/Suite.xml" />
+      <item itemvalue="TestNG.TestStudentClass" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/Dmitry/Desktop/labs/Java/Лабораторные/Lab3-5/src/com/company/Suite.xml" />
+        <item itemvalue="TestNG.TestStudentClass" />
+        <item itemvalue="TestNG.TestLabTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.TestLabTest.Test_Choose" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4090b3fd-4037-40b1-9478-694cd26612fa" name="Default Changelist" comment="" />
+      <created>1583053918802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583053918802</updated>
+      <workItem from="1583053937029" duration="21874000" />
+      <workItem from="1583218580301" duration="2279000" />
+      <workItem from="1583775124866" duration="5043000" />
+      <workItem from="1584429694651" duration="2797000" />
+      <workItem from="1584890906252" duration="7910000" />
+      <workItem from="1584963406492" duration="2812000" />
+      <workItem from="1584987424456" duration="8492000" />
+      <workItem from="1584997974414" duration="987000" />
+      <workItem from="1585032659238" duration="2900000" />
+      <workItem from="1585262943480" duration="14000" />
+      <workItem from="1586197770537" duration="6674000" />
+      <workItem from="1586212193546" duration="4704000" />
+      <workItem from="1586242690641" duration="3373000" />
+      <workItem from="1586849663763" duration="2862000" />
+      <workItem from="1587450543717" duration="2400000" />
+      <workItem from="1588612528091" duration="13000" />
+      <workItem from="1589211067510" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="26" key="#Auto_Import" timestamp="1583059477370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Auto_Import/0.0.1366.728@0.0.1366.728" timestamp="1583059477370" />
+    <state x="402" y="33" key="#Main.Test_NumKurs" timestamp="1586199782685">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="33" key="#Main.Test_NumKurs/0.0.1366.728@0.0.1366.728" timestamp="1586199782685" />
+    <state x="275" y="26" key="#Project_Structure" timestamp="1584964568902">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584964568902" />
+    <state x="122" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586200414833">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="122" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586200414833" />
+    <state x="712" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1586216455533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="712" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586216455533" />
+    <state x="413" y="155" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584998538453">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="155" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1584998538453" />
+    <state x="484" y="256" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583063465701">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="484" y="256" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1583063465701" />
+    <state x="534" y="268" width="317" height="192" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1583068055895">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="534" y="268" width="317" height="192" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1583068055895" />
+    <state x="409" y="23" key="#jackson-databind-2.8.8.jar" timestamp="1584964595721">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="409" y="23" key="#jackson-databind-2.8.8.jar/0.0.1366.728@0.0.1366.728" timestamp="1584964595721" />
+    <state x="445" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583066669488">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583066669488" />
+    <state x="437" y="83" key="DetectedRootsChooserDialog" timestamp="1584998709201">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="437" y="83" key="DetectedRootsChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1584998709201" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1584964670830">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1584964670830" />
+    <state x="443" y="138" key="FileChooserDialogImpl" timestamp="1586200400959">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="443" y="138" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586200400959" />
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1587453748406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587453748406" />
+    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1587453748405">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587453748405" />
+    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1587453748405">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587453748405" />
+    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1587453748406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587453748406" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586204747099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586204747099" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1586204747099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586204747099" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1586204747099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586204747099" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1586204747099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586204747099" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1584998823848">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584998823848" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587450540063">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587450540063" />
+    <state x="387" y="266" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586212664691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="266" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1586212664691" />
+    <state x="454" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586213530325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586213530325" />
+    <state x="65" y="0" key="new project wizard" timestamp="1586200312236">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586200312236" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1584994801342">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584994801342" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584988718839">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584988718839" />
+  </component>
+</project>

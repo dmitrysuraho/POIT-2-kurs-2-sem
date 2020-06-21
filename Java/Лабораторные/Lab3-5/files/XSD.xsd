@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="POITFT">
+		<complexType>
+			<sequence>
+				<element type="string" name="name"/>
+				<element type="integer" name="age"/>
+				<element type="integer" name="DateExem"/>
+				<element type="integer" name="Shift"/>
+				<element type="integer" name="kurs"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="DEVIExtr">
+		<complexType>
+			<sequence>
+				<element type="string" name="name"/>
+				<element type="integer" name="age"/>
+				<element type="integer" name="DateExem"/>
+				<element type="integer" name="Shift"/>
+				<element type="integer" name="kurs"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

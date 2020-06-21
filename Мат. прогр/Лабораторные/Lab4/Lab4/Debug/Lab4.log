@@ -1,0 +1,7 @@
+﻿  Lab4.cpp
+C:\Users\Dmitry\Desktop\labs\Мат. прогр\Лабораторные\Lab4\Lab4\Lab4.cpp(27,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Dmitry\Desktop\labs\Мат. прогр\Лабораторные\Lab4\Lab4\Lab4.cpp(66,31): warning C4101: t33: неиспользованная локальная переменная
+C:\Users\Dmitry\Desktop\labs\Мат. прогр\Лабораторные\Lab4\Lab4\Lab4.cpp(66,36): warning C4101: t43: неиспользованная локальная переменная
+  Levenshtein.cpp
+  Создание кода...
+  Lab4.vcxproj -> C:\Users\Dmitry\Desktop\labs\Мат. прогр\Лабораторные\Lab4\Debug\Lab4.exe

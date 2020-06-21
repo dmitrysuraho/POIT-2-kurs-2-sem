@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище OrdersModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CUSTOMERS">
+    <Key>
+      <PropertyRef Name="IDCUSTOMER" />
+    </Key>
+    <Property Name="IDCUSTOMER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="LASTNAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="ADDRESS" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="PHONE" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="EMAIL" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="ZIP" Type="int" Nullable="false" />
+    <Property Name="REGION" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="COUNTRY" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORDERS">
+    <Key>
+      <PropertyRef Name="IDORDER" />
+    </Key>
+    <Property Name="IDCUSTOMER" Type="int" />
+    <Property Name="IDORDER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CREATEDAT" Type="date" Nullable="false" />
+    <Property Name="SHIPPEDAT" Type="date" />
+    <Property Name="STATUS" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="CURRENCY" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersProducts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDORDER" Type="int" />
+    <Property Name="IDPRODUCT" Type="int" />
+    <Property Name="QUANTITY" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTS">
+    <Key>
+      <PropertyRef Name="IDPRODUCT" />
+    </Key>
+    <Property Name="NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="PRICE" Type="int" Nullable="false" />
+    <Property Name="CURRENCY" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="IDPRODUCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="ORDERS_CUSTOMERS_FK">
+    <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="0..1" />
+    <End Role="ORDERS" Type="Self.ORDERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMERS">
+        <PropertyRef Name="IDCUSTOMER" />
+      </Principal>
+      <Dependent Role="ORDERS">
+        <PropertyRef Name="IDCUSTOMER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrdersProducts_ORDERS_FK">
+    <End Role="ORDERS" Type="Self.ORDERS" Multiplicity="0..1" />
+    <End Role="OrdersProducts" Type="Self.OrdersProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDERS">
+        <PropertyRef Name="IDORDER" />
+      </Principal>
+      <Dependent Role="OrdersProducts">
+        <PropertyRef Name="IDORDER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrdersProducts_PRODUCTS_FK">
+    <End Role="PRODUCTS" Type="Self.PRODUCTS" Multiplicity="0..1" />
+    <End Role="OrdersProducts" Type="Self.OrdersProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTS">
+        <PropertyRef Name="IDPRODUCT" />
+      </Principal>
+      <Dependent Role="OrdersProducts">
+        <PropertyRef Name="IDPRODUCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище OrdersModelContainer">
+    <EntitySet Name="CUSTOMERS" EntityType="Self.CUSTOMERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdersProducts" EntityType="Self.OrdersProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCTS" EntityType="Self.PRODUCTS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="ORDERS_CUSTOMERS_FK" Association="Self.ORDERS_CUSTOMERS_FK">
+      <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+      <End Role="ORDERS" EntitySet="ORDERS" />
+    </AssociationSet>
+    <AssociationSet Name="OrdersProducts_ORDERS_FK" Association="Self.OrdersProducts_ORDERS_FK">
+      <End Role="ORDERS" EntitySet="ORDERS" />
+      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
+    </AssociationSet>
+    <AssociationSet Name="OrdersProducts_PRODUCTS_FK" Association="Self.OrdersProducts_PRODUCTS_FK">
+      <End Role="PRODUCTS" EntitySet="PRODUCTS" />
+      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

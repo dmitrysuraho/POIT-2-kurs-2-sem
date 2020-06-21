@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15d480eb-26e0-4948-ab06-0e51e62a4ef0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3-5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Street.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab9.1/Lab9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab9.2/Lab9.2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/META-INF/Lab1.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/com/company/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/out/production/Lab1/com/company/HelloWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/src/com/company/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/src/com/company/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3-5/out/production/Lab3-4/com/company/TestLabTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3-5/out/production/Lab3-4/com/company/TestLabTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3-5/out/production/Lab3-4/com/company/TestStudentClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3-5/out/production/Lab3-4/com/company/TestStudentClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3-5/src/com/company/TestLabTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3-5/src/com/company/TestLabTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3-5/src/com/company/TestStudentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3-5/src/com/company/TestStudentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/META-INF/Lab6.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/out/production/Lab6/com/company/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab6/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab6/src/com/company/Office.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/DataBase/Queries.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/DataBase/Queries.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/БД_л14_Транзакции.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/БД_л14_Транзакции.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/.vs/Lab9/v15/.ssms_suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/.vs/Lab9/v15/.ssms_suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/Lab9/SQLQuery1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../БД/Лабораторные/Lab9/Lab9/SQLQuery1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ОЗИ/Otchet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ОЗИ/Otchet.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/10_UserControl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/10_UserControl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/.vs/Lab7-8/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Lab7-8.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Lab7-8.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.ru-RU.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.ru-RU.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Resources/lang.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Task/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Task/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/Window1.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/Lab7-8.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/json.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/bin/Debug/json.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.i.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Lab7-8_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.ru-RU.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Resources/lang.ru-RU.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ООП/Лабораторные/Lab7-8/Lab7-8/obj/Debug/Window1.g.i.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1ZnZ6UXaNtm0HHAXe5cAX4rPLeC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Lab7" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15d480eb-26e0-4948-ab06-0e51e62a4ef0" name="Default Changelist" comment="" />
+      <created>1585476646120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585476646120</updated>
+      <workItem from="1585476668629" duration="15665000" />
+      <workItem from="1585552058871" duration="2643000" />
+      <workItem from="1585598458257" duration="507000" />
+      <workItem from="1585637643068" duration="2067000" />
+      <workItem from="1586618890706" duration="12000" />
+      <workItem from="1588612582000" duration="2617000" />
+      <workItem from="1589211097098" duration="3357000" />
+      <workItem from="1589736140214" duration="666000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="26" key="#Project_Structure" timestamp="1589215103723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1589215103723" />
+    <state x="389" y="109" key="FileChooserDialogImpl" timestamp="1585477059630">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="109" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585477059630" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1589215994932">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589215994932" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1589215994931">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589215994931" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1589215994931">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589215994931" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1589215994932">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589215994932" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1585477067764">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585477067764" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1585637672448">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585637672448" />
+    <state x="-3" y="164" key="run.anything.popup" timestamp="1585500990881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-3" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585500990881" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585500930986">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585500930986" />
+  </component>
+</project>

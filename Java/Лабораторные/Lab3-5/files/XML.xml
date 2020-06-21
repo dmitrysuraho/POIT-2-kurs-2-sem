@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studentList  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD.xsd">
+	<POITFT>
+		<name>Artem</name>
+		<age>19</age>
+		<DateExem>30</DateExem>
+		<Shift>1</Shift>
+		<kurs>4</kurs>
+	</POITFT>
+	<DEVIExtr>
+		<name>Dmitry</name>
+		<age>22</age>
+		<DateExem>30</DateExem>
+		<Shift>2</Shift>
+		<kurs>2</kurs>
+	</DEVIExtr>
+</studentList>

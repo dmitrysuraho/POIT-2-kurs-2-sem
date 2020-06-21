@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrdersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CUSTOMERS">
+    <Key>
+      <PropertyRef Name="IDCUSTOMER" />
+    </Key>
+    <Property Name="IDCUSTOMER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRSTNAME" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LASTNAME" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ZIP" Type="Int32" Nullable="false" />
+    <Property Name="REGION" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ORDERS" Relationship="Self.ORDERS_CUSTOMERS_FK" FromRole="CUSTOMERS" ToRole="ORDERS" />
+  </EntityType>
+  <EntityType Name="ORDERS">
+    <Key>
+      <PropertyRef Name="IDORDER" />
+    </Key>
+    <Property Name="IDCUSTOMER" Type="Int32" />
+    <Property Name="IDORDER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CREATEDAT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SHIPPEDAT" Type="DateTime" Precision="0" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CURRENCY" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CUSTOMERS" Relationship="Self.ORDERS_CUSTOMERS_FK" FromRole="ORDERS" ToRole="CUSTOMERS" />
+    <NavigationProperty Name="OrdersProducts" Relationship="Self.OrdersProducts_ORDERS_FK" FromRole="ORDERS" ToRole="OrdersProducts" />
+  </EntityType>
+  <EntityType Name="OrdersProducts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDORDER" Type="Int32" />
+    <Property Name="IDPRODUCT" Type="Int32" />
+    <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ORDERS" Relationship="Self.OrdersProducts_ORDERS_FK" FromRole="OrdersProducts" ToRole="ORDERS" />
+    <NavigationProperty Name="PRODUCTS" Relationship="Self.OrdersProducts_PRODUCTS_FK" FromRole="OrdersProducts" ToRole="PRODUCTS" />
+  </EntityType>
+  <EntityType Name="PRODUCTS">
+    <Key>
+      <PropertyRef Name="IDPRODUCT" />
+    </Key>
+    <Property Name="NAME" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PRICE" Type="Int32" Nullable="false" />
+    <Property Name="CURRENCY" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDPRODUCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="OrdersProducts" Relationship="Self.OrdersProducts_PRODUCTS_FK" FromRole="PRODUCTS" ToRole="OrdersProducts" />
+  </EntityType>
+  <Association Name="ORDERS_CUSTOMERS_FK">
+    <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="0..1" />
+    <End Role="ORDERS" Type="Self.ORDERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMERS">
+        <PropertyRef Name="IDCUSTOMER" />
+      </Principal>
+      <Dependent Role="ORDERS">
+        <PropertyRef Name="IDCUSTOMER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrdersProducts_ORDERS_FK">
+    <End Role="ORDERS" Type="Self.ORDERS" Multiplicity="0..1" />
+    <End Role="OrdersProducts" Type="Self.OrdersProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDERS">
+        <PropertyRef Name="IDORDER" />
+      </Principal>
+      <Dependent Role="OrdersProducts">
+        <PropertyRef Name="IDORDER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrdersProducts_PRODUCTS_FK">
+    <End Role="PRODUCTS" Type="Self.PRODUCTS" Multiplicity="0..1" />
+    <End Role="OrdersProducts" Type="Self.OrdersProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTS">
+        <PropertyRef Name="IDPRODUCT" />
+      </Principal>
+      <Dependent Role="OrdersProducts">
+        <PropertyRef Name="IDPRODUCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OrdersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CUSTOMERS" EntityType="Self.CUSTOMERS" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDERS" />
+    <EntitySet Name="OrdersProducts" EntityType="Self.OrdersProducts" />
+    <EntitySet Name="PRODUCTS" EntityType="Self.PRODUCTS" />
+    <AssociationSet Name="ORDERS_CUSTOMERS_FK" Association="Self.ORDERS_CUSTOMERS_FK">
+      <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+      <End Role="ORDERS" EntitySet="ORDERS" />
+    </AssociationSet>
+    <AssociationSet Name="OrdersProducts_ORDERS_FK" Association="Self.OrdersProducts_ORDERS_FK">
+      <End Role="ORDERS" EntitySet="ORDERS" />
+      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
+    </AssociationSet>
+    <AssociationSet Name="OrdersProducts_PRODUCTS_FK" Association="Self.OrdersProducts_PRODUCTS_FK">
+      <End Role="PRODUCTS" EntitySet="PRODUCTS" />
+      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

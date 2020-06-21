@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab7_8.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7_8"
+        mc:Ignorable="d"
+        Icon="C:\Users\Dmitry\Desktop\C#\Lab7-8\icon.png"
+        Title="{DynamicResource m_add}" Style="{DynamicResource main}" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <Label Margin="200, 10, 200, 0" HorizontalContentAlignment="Center" Content="{DynamicResource m_type}"/>
+            <TextBlock HorizontalAlignment="Center"
+                       TextWrapping="Wrap">
+                <RadioButton x:Name="home"
+                             GroupName="Type"
+                             Content="Дом"/>
+                <RadioButton x:Name="work"
+                             GroupName="Работа"
+                             Content="Работа"/>
+                <RadioButton x:Name="study"
+                             GroupName="Type"
+                             Content="Учеба"/>
+                <RadioButton x:Name="rest"
+                             GroupName="Type"
+                             Content="Отдых"/>
+            </TextBlock>
+            <Label Margin="200, 0, 200, 0" HorizontalContentAlignment="Center" Content="{DynamicResource m_descr}"/>
+            <TextBox x:Name="TextMore" Margin="200, 10, 200, 10" Height="50"/>
+            <Label Margin="200, 0, 200, 0" HorizontalContentAlignment="Center" Content="{DynamicResource m_endDate}"/>
+            <Calendar x:Name="Date"/>
+            <Button Margin="0, 10, 0, 0" Height="30" Width="100" Content="{DynamicResource m_add}"
+                    Command="New">
+                <Button.CommandBindings>
+                    <CommandBinding Command="New" Executed="Add_do"/>
+                </Button.CommandBindings>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

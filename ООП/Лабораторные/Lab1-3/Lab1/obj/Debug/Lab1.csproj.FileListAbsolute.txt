@@ -1,0 +1,12 @@
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\bin\Debug\Lab1.exe.config
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\bin\Debug\Lab1.exe
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\bin\Debug\Lab1.pdb
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\obj\Debug\Lab1.csprojAssemblyReference.cache
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\obj\Debug\Lab1.exe
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1\Lab1\obj\Debug\Lab1.pdb
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\bin\Debug\Lab1.exe.config
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\bin\Debug\Lab1.exe
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\bin\Debug\Lab1.pdb
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\obj\Debug\Lab1.csprojAssemblyReference.cache
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\obj\Debug\Lab1.exe
+C:\Users\Dmitry\Desktop\labs\ООП\Лабораторные\Lab1-3\Lab1\obj\Debug\Lab1.pdb

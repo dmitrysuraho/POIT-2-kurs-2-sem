@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище OrdersModelContainer" CdmEntityContainer="OrdersEntities">
+    <EntitySetMapping Name="CUSTOMERS">
+      <EntityTypeMapping TypeName="OrdersModel.CUSTOMERS">
+        <MappingFragment StoreEntitySet="CUSTOMERS">
+          <ScalarProperty Name="IDCUSTOMER" ColumnName="IDCUSTOMER" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERS">
+      <EntityTypeMapping TypeName="OrdersModel.ORDERS">
+        <MappingFragment StoreEntitySet="ORDERS">
+          <ScalarProperty Name="IDCUSTOMER" ColumnName="IDCUSTOMER" />
+          <ScalarProperty Name="IDORDER" ColumnName="IDORDER" />
+          <ScalarProperty Name="CREATEDAT" ColumnName="CREATEDAT" />
+          <ScalarProperty Name="SHIPPEDAT" ColumnName="SHIPPEDAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdersProducts">
+      <EntityTypeMapping TypeName="OrdersModel.OrdersProducts">
+        <MappingFragment StoreEntitySet="OrdersProducts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDORDER" ColumnName="IDORDER" />
+          <ScalarProperty Name="IDPRODUCT" ColumnName="IDPRODUCT" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTS">
+      <EntityTypeMapping TypeName="OrdersModel.PRODUCTS">
+        <MappingFragment StoreEntitySet="PRODUCTS">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+          <ScalarProperty Name="IDPRODUCT" ColumnName="IDPRODUCT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

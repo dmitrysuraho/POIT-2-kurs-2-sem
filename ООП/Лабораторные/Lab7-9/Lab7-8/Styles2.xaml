@@ -1,0 +1,97 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Lab7_8">
+    <!--style for button-->
+    <Style x:Key="rightButtons">
+        <Style.Setters>
+            <Setter Property="ItemsControl.Background" Value="White"/>
+            <Setter Property="ItemsControl.Height" Value="40"/>
+            <Setter Property="ItemsControl.Margin" Value="5"/>
+            <Setter Property="ItemsControl.Foreground" Value="Black"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ButtonBase.IsMouseOver" Value="True"/>
+                    <Condition Property="ButtonBase.IsPressed" Value="False"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                    <Setter Property="ItemsControl.FontSize" Value="10"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <!--style for textbox(searching)-->
+    <Style x:Key="textBoxSerach">
+        <Setter Property="ItemsControl.Width" Value="100"/>
+        <Setter Property="ItemsControl.BorderBrush" Value="Blue"/>
+    </Style>
+    <!--style for search-buttons-->
+    <Style x:Key="searchTextButtons">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=iSsearch, Path=IsChecked}" Value="False">
+                <Setter Property="ItemsControl.IsEnabled" Value="False"/>
+            </DataTrigger>
+        </Style.Triggers>
+        <Setter Property="ItemsControl.Background" Value="White"/>
+        <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
+        <Setter Property="ItemsControl.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="serachDataButton">
+        <Setter Property="ItemsControl.Background" Value="White"/>
+        <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
+        <Setter Property="ItemsControl.Foreground" Value="Black"/>
+        <Setter Property="ItemsControl.Margin" Value="50, 0"/>
+    </Style>
+    <Style x:Key="filterButton">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="FontSize" To="20"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="FontSize" To="12"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+        <Setter Property="ItemsControl.Background" Value="White"/>
+        <Setter Property="ItemsControl.Foreground" Value="Black"/>
+    </Style>
+
+    <Style x:Key="main">
+        <Setter Property="Window.Background" Value="Gray"/>
+    </Style>
+
+    <ControlTemplate TargetType="Button" x:Key="circleButtonAdd">
+        <Border CornerRadius="25" BorderBrush="Black" BorderThickness="2"
+                    Background="White">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" 
+                            Content="{DynamicResource m_add}"/>
+        </Border>
+    </ControlTemplate>
+    <ControlTemplate TargetType="Button" x:Key="circleButtonSave">
+        <Border CornerRadius="25" BorderBrush="Black" BorderThickness="3"
+                    Background="White">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" 
+                            Content="{DynamicResource m_save}"/>
+        </Border>
+    </ControlTemplate>
+    <ControlTemplate TargetType="Button" x:Key="circleButtonAbout">
+        <Border CornerRadius="25" BorderBrush="Black" BorderThickness="1"
+                    Background="White">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" 
+                            Content="{DynamicResource m_about}"/>
+        </Border>
+    </ControlTemplate>
+</ResourceDictionary>

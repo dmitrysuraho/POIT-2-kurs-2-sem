@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="m_title">Лист задач</v:String>
+    <v:String x:Key="m_lang">Язык</v:String>
+    <v:String x:Key="m_add">Добавить задачу</v:String>
+    <v:String x:Key="m_save">Сохранить задачи</v:String>
+    <v:String x:Key="m_about">О программе</v:String>
+    <v:String x:Key="m_reset">Сброс фильтров</v:String>
+    <v:String x:Key="m_nowCal">Сегодня на календаре:</v:String>
+    <v:String x:Key="m_stype">Поиск по типу: </v:String>
+    <v:String x:Key="m_sdescr">Поиск по описанию: </v:String>
+    <v:String x:Key="m_search">Поиск</v:String>
+    <v:String x:Key="m_type">Тип задачи</v:String>
+    <v:String x:Key="m_descr">Описание</v:String>
+    <v:String x:Key="m_endDate">Дата завершения</v:String>
+    <v:String x:Key="m_startDate">Дата добавления</v:String>
+    <v:String x:Key="m_status">Статус</v:String>
+
+    <v:String x:Key="m_filtration">Фильтрация</v:String>
+    <v:String x:Key="m_home">Дом</v:String>
+    <v:String x:Key="m_work">Работа</v:String>
+    <v:String x:Key="m_study">Учеба</v:String>
+    <v:String x:Key="m_rest">Отдых</v:String>
+    <v:String x:Key="m_active">Активная</v:String>
+    <v:String x:Key="m_notactive">Неактивная</v:String>
+    <v:String x:Key="m_thismonth">В этом месяце</v:String>
+    <v:String x:Key="m_nextmonth">В следующем месяце</v:String>
+    <v:String x:Key="m_filter">Фильтровать</v:String>
+</ResourceDictionary>

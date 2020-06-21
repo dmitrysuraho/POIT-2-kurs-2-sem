@@ -1,0 +1,1 @@
+select * from ЗАКАЗЫ where Заказчик='Корона' order by Дата_поставки

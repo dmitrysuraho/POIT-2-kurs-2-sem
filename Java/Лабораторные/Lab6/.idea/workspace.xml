@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45acd1de-8276-4af5-8edc-dc3958f4149e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Street.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/META-INF/Lab6.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/com/company/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab6/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/com/company/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab6/com/company/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Office.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab7/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1ZDojJ0bmFuFWjwSxrdLHWKbfJe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Laba_6" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dmitry\Desktop\labs\Java\Лабораторные\Lab6\src\com\company" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Lab6" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45acd1de-8276-4af5-8edc-dc3958f4149e" name="Default Changelist" comment="" />
+      <created>1584383163649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584383163649</updated>
+      <workItem from="1584383196803" duration="8750000" />
+      <workItem from="1584428004762" duration="1339000" />
+      <workItem from="1585587419920" duration="6394000" />
+      <workItem from="1586241717194" duration="622000" />
+      <workItem from="1586617414666" duration="497000" />
+      <workItem from="1586618773933" duration="1750000" />
+      <workItem from="1586790619140" duration="1656000" />
+      <workItem from="1586845316144" duration="3542000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="26" key="#Glassfish_Server" timestamp="1586795900987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Glassfish_Server/0.0.1366.728@0.0.1366.728" timestamp="1586795900987" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1586795893596">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586795893596" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1586849518583">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586849518583" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1586849518583">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586849518583" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1586849518583">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586849518583" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1586849518583">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586849518583" />
+    <state x="186" y="10" key="SettingsEditor" timestamp="1586795921470">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586795921470" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1586845321115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586845321115" />
+  </component>
+</project>
